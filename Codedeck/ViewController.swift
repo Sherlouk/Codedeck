@@ -10,10 +10,15 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    var monitor: HIDDeviceMonitor = {
+        return HIDDeviceMonitor(streamDeckProducts: [.streamDeck, .streamDeckMini])
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        monitor.startMonitoring(delegate: self)
     }
 
     override var representedObject: Any? {
@@ -22,6 +27,32 @@ class ViewController: NSViewController {
         }
     }
 
-
 }
 
+extension ViewController: HIDDeviceMonitorDelegate {
+    
+    func HIDDeviceAdded(device: HIDDevice) {
+        do {
+            print(device.description)
+            
+            let streamDeck = try StreamDeck(device: device)
+            print(streamDeck)
+            
+            device.startReading { data in
+//                print(data)
+            }
+            
+        } catch {
+            print(error)
+        }
+    }
+    
+    func HIDDeviceRemoved(device: HIDDevice) {
+        print(device.description)
+    }
+    
+    func HIDDeviceError(error: Error) {
+        print(error)
+    }
+    
+}

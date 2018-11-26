@@ -12,6 +12,19 @@
 		989D5D2721AC2DF30035489F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989D5D2621AC2DF30035489F /* Assets.xcassets */; };
 		989D5D2A21AC2DF30035489F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989D5D2821AC2DF30035489F /* Main.storyboard */; };
 		989D5D3621AC2DF30035489F /* CodedeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D3521AC2DF30035489F /* CodedeckTests.swift */; };
+		989D5D4321AC309B0035489F /* HIDDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D4221AC309B0035489F /* HIDDevice.swift */; };
+		989D5D4621AC31AE0035489F /* IOHIDDevice+GetProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D4521AC31AE0035489F /* IOHIDDevice+GetProperty.swift */; };
+		989D5D4821AC31F40035489F /* HIDDeviceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D4721AC31F40035489F /* HIDDeviceMonitor.swift */; };
+		989D5D4B21AC32EE0035489F /* StreamDeckProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D4A21AC32EE0035489F /* StreamDeckProduct.swift */; };
+		989D5D4E21AC33C80035489F /* HIDDeviceMonitor+StreamDeckProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D4D21AC33C80035489F /* HIDDeviceMonitor+StreamDeckProducts.swift */; };
+		989D5D5021AC34740035489F /* IOHIDManager+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D4F21AC34740035489F /* IOHIDManager+Configure.swift */; };
+		989D5D5221AC37040035489F /* HIDDeviceMonitorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5121AC37040035489F /* HIDDeviceMonitorDelegate.swift */; };
+		989D5D5421AC38860035489F /* IOHIDDevice+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5321AC38860035489F /* IOHIDDevice+Configure.swift */; };
+		989D5D5621AC389F0035489F /* HIDDevice+Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5521AC389F0035489F /* HIDDevice+Reading.swift */; };
+		989D5D5821AC3C480035489F /* HIDDevice+StreamDeckProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5721AC3C480035489F /* HIDDevice+StreamDeckProduct.swift */; };
+		989D5D5A21AC3D640035489F /* StreamDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5921AC3D640035489F /* StreamDeck.swift */; };
+		989D5D5C21AC3E3C0035489F /* StreamDeckKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5B21AC3E3C0035489F /* StreamDeckKey.swift */; };
+		989D5D5E21AC3FB20035489F /* StreamDeckKey+Cocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5D21AC3FB20035489F /* StreamDeckKey+Cocoa.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +48,19 @@
 		989D5D3121AC2DF30035489F /* CodedeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodedeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		989D5D3521AC2DF30035489F /* CodedeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedeckTests.swift; sourceTree = "<group>"; };
 		989D5D3721AC2DF30035489F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		989D5D4221AC309B0035489F /* HIDDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDDevice.swift; sourceTree = "<group>"; };
+		989D5D4521AC31AE0035489F /* IOHIDDevice+GetProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+GetProperty.swift"; sourceTree = "<group>"; };
+		989D5D4721AC31F40035489F /* HIDDeviceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDDeviceMonitor.swift; sourceTree = "<group>"; };
+		989D5D4A21AC32EE0035489F /* StreamDeckProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckProduct.swift; sourceTree = "<group>"; };
+		989D5D4D21AC33C80035489F /* HIDDeviceMonitor+StreamDeckProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIDDeviceMonitor+StreamDeckProducts.swift"; sourceTree = "<group>"; };
+		989D5D4F21AC34740035489F /* IOHIDManager+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDManager+Configure.swift"; sourceTree = "<group>"; };
+		989D5D5121AC37040035489F /* HIDDeviceMonitorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDDeviceMonitorDelegate.swift; sourceTree = "<group>"; };
+		989D5D5321AC38860035489F /* IOHIDDevice+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+Configure.swift"; sourceTree = "<group>"; };
+		989D5D5521AC389F0035489F /* HIDDevice+Reading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIDDevice+Reading.swift"; sourceTree = "<group>"; };
+		989D5D5721AC3C480035489F /* HIDDevice+StreamDeckProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIDDevice+StreamDeckProduct.swift"; sourceTree = "<group>"; };
+		989D5D5921AC3D640035489F /* StreamDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeck.swift; sourceTree = "<group>"; };
+		989D5D5B21AC3E3C0035489F /* StreamDeckKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckKey.swift; sourceTree = "<group>"; };
+		989D5D5D21AC3FB20035489F /* StreamDeckKey+Cocoa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StreamDeckKey+Cocoa.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +102,7 @@
 		989D5D2121AC2DEF0035489F /* Codedeck */ = {
 			isa = PBXGroup;
 			children = (
+				989D5D4021AC30030035489F /* Library */,
 				989D5D2221AC2DEF0035489F /* AppDelegate.swift */,
 				989D5D2421AC2DEF0035489F /* ViewController.swift */,
 				989D5D2621AC2DF30035489F /* Assets.xcassets */,
@@ -93,6 +120,58 @@
 				989D5D3721AC2DF30035489F /* Info.plist */,
 			);
 			path = CodedeckTests;
+			sourceTree = "<group>";
+		};
+		989D5D4021AC30030035489F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				989D5D4921AC32E40035489F /* StreamDeck */,
+				989D5D4121AC300E0035489F /* HID */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		989D5D4121AC300E0035489F /* HID */ = {
+			isa = PBXGroup;
+			children = (
+				989D5D4421AC319E0035489F /* Extensions */,
+				989D5D4221AC309B0035489F /* HIDDevice.swift */,
+				989D5D4721AC31F40035489F /* HIDDeviceMonitor.swift */,
+				989D5D5121AC37040035489F /* HIDDeviceMonitorDelegate.swift */,
+			);
+			path = HID;
+			sourceTree = "<group>";
+		};
+		989D5D4421AC319E0035489F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				989D5D4521AC31AE0035489F /* IOHIDDevice+GetProperty.swift */,
+				989D5D4F21AC34740035489F /* IOHIDManager+Configure.swift */,
+				989D5D5321AC38860035489F /* IOHIDDevice+Configure.swift */,
+				989D5D5521AC389F0035489F /* HIDDevice+Reading.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		989D5D4921AC32E40035489F /* StreamDeck */ = {
+			isa = PBXGroup;
+			children = (
+				989D5D4C21AC33BE0035489F /* Extensions */,
+				989D5D4A21AC32EE0035489F /* StreamDeckProduct.swift */,
+				989D5D5921AC3D640035489F /* StreamDeck.swift */,
+				989D5D5B21AC3E3C0035489F /* StreamDeckKey.swift */,
+			);
+			path = StreamDeck;
+			sourceTree = "<group>";
+		};
+		989D5D4C21AC33BE0035489F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				989D5D4D21AC33C80035489F /* HIDDeviceMonitor+StreamDeckProducts.swift */,
+				989D5D5721AC3C480035489F /* HIDDevice+StreamDeckProduct.swift */,
+				989D5D5D21AC3FB20035489F /* StreamDeckKey+Cocoa.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +224,11 @@
 				TargetAttributes = {
 					989D5D1E21AC2DEF0035489F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					989D5D3021AC2DF30035489F = {
 						CreatedOnToolsVersion = 10.1;
@@ -195,8 +279,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				989D5D5C21AC3E3C0035489F /* StreamDeckKey.swift in Sources */,
+				989D5D5821AC3C480035489F /* HIDDevice+StreamDeckProduct.swift in Sources */,
 				989D5D2521AC2DEF0035489F /* ViewController.swift in Sources */,
+				989D5D4E21AC33C80035489F /* HIDDeviceMonitor+StreamDeckProducts.swift in Sources */,
+				989D5D4821AC31F40035489F /* HIDDeviceMonitor.swift in Sources */,
+				989D5D5A21AC3D640035489F /* StreamDeck.swift in Sources */,
+				989D5D5221AC37040035489F /* HIDDeviceMonitorDelegate.swift in Sources */,
+				989D5D4B21AC32EE0035489F /* StreamDeckProduct.swift in Sources */,
+				989D5D5621AC389F0035489F /* HIDDevice+Reading.swift in Sources */,
+				989D5D5021AC34740035489F /* IOHIDManager+Configure.swift in Sources */,
+				989D5D5421AC38860035489F /* IOHIDDevice+Configure.swift in Sources */,
+				989D5D4621AC31AE0035489F /* IOHIDDevice+GetProperty.swift in Sources */,
+				989D5D5E21AC3FB20035489F /* StreamDeckKey+Cocoa.swift in Sources */,
 				989D5D2321AC2DEF0035489F /* AppDelegate.swift in Sources */,
+				989D5D4321AC309B0035489F /* HIDDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
