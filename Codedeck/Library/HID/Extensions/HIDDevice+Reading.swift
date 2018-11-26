@@ -25,7 +25,6 @@ extension HIDDevice {
     private func read(reportId: UInt32, report: UnsafeMutablePointer<UInt8>, reportLength: CFIndex) {
         let data = Data(bytes: UnsafePointer<UInt8>(report), count: reportLength)
         readingCallback?(data)
-        print(":: " + String(describing: data))
     }
     
 }

@@ -36,12 +36,10 @@ extension ViewController: HIDDeviceMonitorDelegate {
             print(device.description)
             
             let streamDeck = try StreamDeck(device: device)
-            print(streamDeck)
-            
-            device.startReading { data in
-//                print(data)
-            }
-            
+            try streamDeck.setBrightness(50)
+//            streamDeck.device.getFeatureReport {
+//                print("report")
+//            }
         } catch {
             print(error)
         }

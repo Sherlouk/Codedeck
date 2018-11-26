@@ -24,6 +24,10 @@ public class StreamDeckKey {
     
     // Public
     
+    public var isPressed: Bool {
+        return streamDeck.keysPressed[keyIndex] == true
+    }
+    
     public func clear() throws {
         try setColor(red: 0, green: 0, blue: 0)
     }

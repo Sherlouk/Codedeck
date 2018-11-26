@@ -25,6 +25,8 @@
 		989D5D5A21AC3D640035489F /* StreamDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5921AC3D640035489F /* StreamDeck.swift */; };
 		989D5D5C21AC3E3C0035489F /* StreamDeckKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5B21AC3E3C0035489F /* StreamDeckKey.swift */; };
 		989D5D5E21AC3FB20035489F /* StreamDeckKey+Cocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5D21AC3FB20035489F /* StreamDeckKey+Cocoa.swift */; };
+		989D5D6D21AC77640035489F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D6C21AC77640035489F /* Logger.swift */; };
+		989D5D6F21AC7BD70035489F /* IOHIDDevice+FeatureReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D6E21AC7BD70035489F /* IOHIDDevice+FeatureReport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		989D5D5921AC3D640035489F /* StreamDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeck.swift; sourceTree = "<group>"; };
 		989D5D5B21AC3E3C0035489F /* StreamDeckKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckKey.swift; sourceTree = "<group>"; };
 		989D5D5D21AC3FB20035489F /* StreamDeckKey+Cocoa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StreamDeckKey+Cocoa.swift"; sourceTree = "<group>"; };
+		989D5D6C21AC77640035489F /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		989D5D6E21AC7BD70035489F /* IOHIDDevice+FeatureReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+FeatureReport.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		989D5D4021AC30030035489F /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				989D5D6B21AC77530035489F /* Logging */,
 				989D5D4921AC32E40035489F /* StreamDeck */,
 				989D5D4121AC300E0035489F /* HID */,
 			);
@@ -149,6 +154,7 @@
 				989D5D4F21AC34740035489F /* IOHIDManager+Configure.swift */,
 				989D5D5321AC38860035489F /* IOHIDDevice+Configure.swift */,
 				989D5D5521AC389F0035489F /* HIDDevice+Reading.swift */,
+				989D5D6E21AC7BD70035489F /* IOHIDDevice+FeatureReport.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -172,6 +178,14 @@
 				989D5D5D21AC3FB20035489F /* StreamDeckKey+Cocoa.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		989D5D6B21AC77530035489F /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				989D5D6C21AC77640035489F /* Logger.swift */,
+			);
+			path = Logging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +300,8 @@
 				989D5D4821AC31F40035489F /* HIDDeviceMonitor.swift in Sources */,
 				989D5D5A21AC3D640035489F /* StreamDeck.swift in Sources */,
 				989D5D5221AC37040035489F /* HIDDeviceMonitorDelegate.swift in Sources */,
+				989D5D6F21AC7BD70035489F /* IOHIDDevice+FeatureReport.swift in Sources */,
+				989D5D6D21AC77640035489F /* Logger.swift in Sources */,
 				989D5D4B21AC32EE0035489F /* StreamDeckProduct.swift in Sources */,
 				989D5D5621AC389F0035489F /* HIDDevice+Reading.swift in Sources */,
 				989D5D5021AC34740035489F /* IOHIDManager+Configure.swift in Sources */,

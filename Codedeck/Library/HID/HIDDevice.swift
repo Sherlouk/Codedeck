@@ -37,7 +37,7 @@ public class HIDDevice {
     /// Callback used to obtain data in realtime from the device
     internal var readingCallback: ReadingCallback?
     
-    init(device: IOHIDDevice) throws {
+    internal init(device: IOHIDDevice) throws {
         self.device = device
         
         id = try device.getProperty(key: kIOHIDLocationIDKey)
@@ -48,7 +48,8 @@ public class HIDDevice {
         serialNumber = try device.getProperty(key: kIOHIDSerialNumberKey)
     }
     
-    var description: String {
+    /// Basic description of the device with all parameters listed
+    public var description: String {
         return """
         HIDDevice (\(name) - \(serialNumber)):
             ID: \(id)
@@ -56,6 +57,14 @@ public class HIDDevice {
             Product ID: \(productId)
             Report Size: \(reportSize)
         """
+    }
+    
+    public func getFeatureReport(callback: () -> ()) {
+        device.getFeatureReport(reportSize: reportSize)
+    }
+    
+    public func sendFeatureReport(data: Data) {
+        device.sendFeatureReport(reportSize: reportSize, data: data)
     }
     
 }

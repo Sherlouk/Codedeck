@@ -11,4 +11,5 @@ The project is currently not setup in a usable fashion, and is very incomplete -
 ## Shoutouts
 
 Credit to [Arti3DPlayer/USBDeviceSwift](https://github.com/Arti3DPlayer/USBDeviceSwift) for the foundations of the HID detection
+
 Credit to [Lange/node-elgato-stream-deck](https://github.com/Lange/node-elgato-stream-deck) for their work and doing all the hard work!
