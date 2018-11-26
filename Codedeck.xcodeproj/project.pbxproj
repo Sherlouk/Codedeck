@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		989D5D2321AC2DEF0035489F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D2221AC2DEF0035489F /* AppDelegate.swift */; };
+		989D5D2521AC2DEF0035489F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D2421AC2DEF0035489F /* ViewController.swift */; };
+		989D5D2721AC2DF30035489F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989D5D2621AC2DF30035489F /* Assets.xcassets */; };
+		989D5D2A21AC2DF30035489F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989D5D2821AC2DF30035489F /* Main.storyboard */; };
+		989D5D3621AC2DF30035489F /* CodedeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D3521AC2DF30035489F /* CodedeckTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		989D5D3221AC2DF30035489F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 989D5D1721AC2DEF0035489F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 989D5D1E21AC2DEF0035489F;
+			remoteInfo = Codedeck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		989D5D1F21AC2DEF0035489F /* Codedeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codedeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		989D5D2221AC2DEF0035489F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		989D5D2421AC2DEF0035489F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		989D5D2621AC2DF30035489F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		989D5D2921AC2DF30035489F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		989D5D2B21AC2DF30035489F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		989D5D2C21AC2DF30035489F /* Codedeck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Codedeck.entitlements; sourceTree = "<group>"; };
+		989D5D3121AC2DF30035489F /* CodedeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodedeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		989D5D3521AC2DF30035489F /* CodedeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedeckTests.swift; sourceTree = "<group>"; };
+		989D5D3721AC2DF30035489F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		989D5D1C21AC2DEF0035489F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		989D5D2E21AC2DF30035489F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		989D5D1621AC2DEF0035489F = {
+			isa = PBXGroup;
+			children = (
+				989D5D2121AC2DEF0035489F /* Codedeck */,
+				989D5D3421AC2DF30035489F /* CodedeckTests */,
+				989D5D2021AC2DEF0035489F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		989D5D2021AC2DEF0035489F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				989D5D1F21AC2DEF0035489F /* Codedeck.app */,
+				989D5D3121AC2DF30035489F /* CodedeckTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		989D5D2121AC2DEF0035489F /* Codedeck */ = {
+			isa = PBXGroup;
+			children = (
+				989D5D2221AC2DEF0035489F /* AppDelegate.swift */,
+				989D5D2421AC2DEF0035489F /* ViewController.swift */,
+				989D5D2621AC2DF30035489F /* Assets.xcassets */,
+				989D5D2821AC2DF30035489F /* Main.storyboard */,
+				989D5D2B21AC2DF30035489F /* Info.plist */,
+				989D5D2C21AC2DF30035489F /* Codedeck.entitlements */,
+			);
+			path = Codedeck;
+			sourceTree = "<group>";
+		};
+		989D5D3421AC2DF30035489F /* CodedeckTests */ = {
+			isa = PBXGroup;
+			children = (
+				989D5D3521AC2DF30035489F /* CodedeckTests.swift */,
+				989D5D3721AC2DF30035489F /* Info.plist */,
+			);
+			path = CodedeckTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		989D5D1E21AC2DEF0035489F /* Codedeck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 989D5D3A21AC2DF30035489F /* Build configuration list for PBXNativeTarget "Codedeck" */;
+			buildPhases = (
+				989D5D1B21AC2DEF0035489F /* Sources */,
+				989D5D1C21AC2DEF0035489F /* Frameworks */,
+				989D5D1D21AC2DEF0035489F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Codedeck;
+			productName = Codedeck;
+			productReference = 989D5D1F21AC2DEF0035489F /* Codedeck.app */;
+			productType = "com.apple.product-type.application";
+		};
+		989D5D3021AC2DF30035489F /* CodedeckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 989D5D3D21AC2DF30035489F /* Build configuration list for PBXNativeTarget "CodedeckTests" */;
+			buildPhases = (
+				989D5D2D21AC2DF30035489F /* Sources */,
+				989D5D2E21AC2DF30035489F /* Frameworks */,
+				989D5D2F21AC2DF30035489F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				989D5D3321AC2DF30035489F /* PBXTargetDependency */,
+			);
+			name = CodedeckTests;
+			productName = CodedeckTests;
+			productReference = 989D5D3121AC2DF30035489F /* CodedeckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		989D5D1721AC2DEF0035489F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Sherlouk;
+				TargetAttributes = {
+					989D5D1E21AC2DEF0035489F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					989D5D3021AC2DF30035489F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 989D5D1E21AC2DEF0035489F;
+					};
+				};
+			};
+			buildConfigurationList = 989D5D1A21AC2DEF0035489F /* Build configuration list for PBXProject "Codedeck" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 989D5D1621AC2DEF0035489F;
+			productRefGroup = 989D5D2021AC2DEF0035489F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				989D5D1E21AC2DEF0035489F /* Codedeck */,
+				989D5D3021AC2DF30035489F /* CodedeckTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		989D5D1D21AC2DEF0035489F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				989D5D2721AC2DF30035489F /* Assets.xcassets in Resources */,
+				989D5D2A21AC2DF30035489F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		989D5D2F21AC2DF30035489F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		989D5D1B21AC2DEF0035489F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				989D5D2521AC2DEF0035489F /* ViewController.swift in Sources */,
+				989D5D2321AC2DEF0035489F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		989D5D2D21AC2DF30035489F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				989D5D3621AC2DF30035489F /* CodedeckTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		989D5D3321AC2DF30035489F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 989D5D1E21AC2DEF0035489F /* Codedeck */;
+			targetProxy = 989D5D3221AC2DF30035489F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		989D5D2821AC2DF30035489F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				989D5D2921AC2DF30035489F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		989D5D3821AC2DF30035489F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		989D5D3921AC2DF30035489F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		989D5D3B21AC2DF30035489F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Codedeck/Codedeck.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Codedeck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.sherlo.Codedeck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		989D5D3C21AC2DF30035489F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Codedeck/Codedeck.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Codedeck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.sherlo.Codedeck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		989D5D3E21AC2DF30035489F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CodedeckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.sherlo.CodedeckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Codedeck.app/Contents/MacOS/Codedeck";
+			};
+			name = Debug;
+		};
+		989D5D3F21AC2DF30035489F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CodedeckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.sherlo.CodedeckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Codedeck.app/Contents/MacOS/Codedeck";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		989D5D1A21AC2DEF0035489F /* Build configuration list for PBXProject "Codedeck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				989D5D3821AC2DF30035489F /* Debug */,
+				989D5D3921AC2DF30035489F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		989D5D3A21AC2DF30035489F /* Build configuration list for PBXNativeTarget "Codedeck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				989D5D3B21AC2DF30035489F /* Debug */,
+				989D5D3C21AC2DF30035489F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		989D5D3D21AC2DF30035489F /* Build configuration list for PBXNativeTarget "CodedeckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				989D5D3E21AC2DF30035489F /* Debug */,
+				989D5D3F21AC2DF30035489F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 989D5D1721AC2DEF0035489F /* Project object */;
+}
