@@ -14,19 +14,19 @@ extension IOHIDDevice {
     // WIP
     
     func getFeatureReport(reportSize: Int) {
-        print("get feature report \(reportSize)")
-        var reportSizePointer = reportSize
-        let report = UnsafeMutablePointer<UInt8>.allocate(capacity: reportSize)
-        
-        let callback : IOHIDReportCallback = { inContext, inResult, inSender, type, reportId, report, reportLength in
-            let data = Data(bytes: UnsafePointer<UInt8>(report), count: reportLength)
-            print(data)
-            print(String(data: data, encoding: .utf8))
-        }
-        
-        let context = unsafeBitCast(self, to: UnsafeMutableRawPointer.self)
-        let returnValue = IOHIDDeviceGetReportWithCallback(self, kIOHIDReportTypeFeature, 3, report, &reportSizePointer, 10, callback, context)
-        print(returnValue == kIOReturnUnsupported)
+//        print("get feature report \(reportSize)")
+//        var reportSizePointer = reportSize
+//        let report = UnsafeMutablePointer<UInt8>.allocate(capacity: reportSize)
+//
+//        let callback : IOHIDReportCallback = { inContext, inResult, inSender, type, reportId, report, reportLength in
+//            let data = Data(bytes: UnsafePointer<UInt8>(report), count: reportLength)
+//            print(data)
+//            print(String(data: data, encoding: .utf8))
+//        }
+//
+//        let context = unsafeBitCast(self, to: UnsafeMutableRawPointer.self)
+//        let returnValue = IOHIDDeviceGetReportWithCallback(self, kIOHIDReportTypeFeature, 3, report, &reportSizePointer, 10, callback, context)
+//        print(returnValue == kIOReturnUnsupported)
     }
     
     func sendFeatureReport(reportSize: Int, data: Data) {

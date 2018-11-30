@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9840231821B1FCBD00A3CA96 /* Data+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840231721B1FCBD00A3CA96 /* Data+Convenience.swift */; };
 		989D5D2321AC2DEF0035489F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D2221AC2DEF0035489F /* AppDelegate.swift */; };
 		989D5D2521AC2DEF0035489F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D2421AC2DEF0035489F /* ViewController.swift */; };
 		989D5D2721AC2DF30035489F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989D5D2621AC2DF30035489F /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9840231721B1FCBD00A3CA96 /* Data+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Convenience.swift"; sourceTree = "<group>"; };
 		989D5D1F21AC2DEF0035489F /* Codedeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codedeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989D5D2221AC2DEF0035489F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		989D5D2421AC2DEF0035489F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				989D5D4D21AC33C80035489F /* HIDDeviceMonitor+StreamDeckProducts.swift */,
 				989D5D5721AC3C480035489F /* HIDDevice+StreamDeckProduct.swift */,
 				989D5D5D21AC3FB20035489F /* StreamDeckKey+Cocoa.swift */,
+				9840231721B1FCBD00A3CA96 /* Data+Convenience.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,7 +254,7 @@
 				};
 			};
 			buildConfigurationList = 989D5D1A21AC2DEF0035489F /* Build configuration list for PBXProject "Codedeck" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -308,6 +311,7 @@
 				989D5D5421AC38860035489F /* IOHIDDevice+Configure.swift in Sources */,
 				989D5D4621AC31AE0035489F /* IOHIDDevice+GetProperty.swift in Sources */,
 				989D5D5E21AC3FB20035489F /* StreamDeckKey+Cocoa.swift in Sources */,
+				9840231821B1FCBD00A3CA96 /* Data+Convenience.swift in Sources */,
 				989D5D2321AC2DEF0035489F /* AppDelegate.swift in Sources */,
 				989D5D4321AC309B0035489F /* HIDDevice.swift in Sources */,
 			);

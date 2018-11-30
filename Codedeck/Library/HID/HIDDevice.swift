@@ -67,4 +67,15 @@ public class HIDDevice {
         device.sendFeatureReport(reportSize: reportSize, data: data)
     }
     
+    // Block to enable overridding from tests
+    internal var writeBlock: (Data) -> () = { _ in 
+        // TODO https://github.com/Arti3DPlayer/USBDeviceSwift/blob/master/RaceflightControllerHIDExample/RaceflightControllerHIDExample/RFDevice.swift#L26
+    }
+    
+    public func write(data: Data) {
+        
+        print(data.count)
+        writeBlock(data)
+    }
+    
 }

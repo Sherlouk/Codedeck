@@ -32,12 +32,22 @@ public class StreamDeckKey {
         try setColor(red: 0, green: 0, blue: 0)
     }
     
+    static let NUM_FIRST_PAGE_PIXELS = 2583
+    static let NUM_SECOND_PAGE_PIXELS = 2601
+    
     public func setColor(red: Int, green: Int, blue: Int) throws {
         try assertRGBValue(red)
         try assertRGBValue(green)
         try assertRGBValue(blue)
         
-        // TODO
+        let bytes: [UInt8] = [blue, green, red].map({ UInt8($0) })
+        let data = Data(bytes: bytes)
+        
+        let firstPage = streamDeck.dataPageOne(keyIndex: keyIndex, data: data.repeated(count: StreamDeckKey.NUM_FIRST_PAGE_PIXELS))
+        let secondPage = streamDeck.dataPageTwo(keyIndex: keyIndex, data: data.repeated(count: StreamDeckKey.NUM_SECOND_PAGE_PIXELS))
+        
+        streamDeck.write(data: firstPage)
+        streamDeck.write(data: secondPage)
     }
     
     // Private
