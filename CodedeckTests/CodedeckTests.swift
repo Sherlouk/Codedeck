@@ -10,22 +10,14 @@ import XCTest
 @testable import Codedeck
 
 class CodedeckTests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        let testDevice = TestDevice()
-        var pageNumber: Int = 0
-        
+    
+    func testSetColorRed() {
         let writeExpectation = expectation(description: "Two pages of content should be written to")
         writeExpectation.expectedFulfillmentCount = 2
         
+        var pageNumber: Int = 0
+        
+        let testDevice = TestDevice()
         testDevice.writeBlock = { data in
             switch pageNumber {
             case 0:
@@ -42,36 +34,23 @@ class CodedeckTests: XCTestCase {
         
         let device = HIDDevice.makeMockStreamDeck(rawDevice: testDevice)
         let streamDeck = try! StreamDeck(device: device)
-        try! streamDeck.key(for: 0).setColor(red: 255, green: 0, blue: 0)
+        XCTAssertNoThrow(try streamDeck.key(for: 0).setColor(red: 255, green: 0, blue: 0))
         
         waitForExpectations(timeout: 0.1, handler: nil)
     }
-
-}
-
-func XCTAssertDataFromJSON(data: Data, jsonName: String) {
-    guard let url = Bundle(for: CodedeckTests.self).url(forResource: jsonName, withExtension: "json") else {
-        XCTFail("Failed to locate reference JSON file")
-        return
+    
+    func testSetColorOutOfBounds() {
+        let device = HIDDevice.makeMockStreamDeck(rawDevice: TestDevice())
+        let streamDeck = try! StreamDeck(device: device)
+        
+        let key = try! streamDeck.key(for: 0)
+        let error = StreamDeckKey.Error.rgbValueOutOfRange(value: 300)
+        
+        XCTAssertThrowsErrorMatching(try key.setColor(red: 300, green: 0, blue: 0), error: error)
+        XCTAssertThrowsErrorMatching(try key.setColor(red: 0, green: 300, blue: 0), error: error)
+        XCTAssertThrowsErrorMatching(try key.setColor(red: 0, green: 0, blue: 300), error: error)
     }
     
-    guard let fileData = try? Data(contentsOf: url) else {
-        XCTFail("Failed to laod data from JSON file")
-        return
-    }
-    
-    guard let referenceBytes = (try? JSONSerialization.jsonObject(with: fileData)) as? [UInt8] else {
-        XCTFail("Could not convert file data to JSON")
-        return
-    }
-    
-    let actualBytes = [UInt8](data)
-    
-    guard referenceBytes == actualBytes else {
-        XCTFail("Reference bytes is not a match for actual bytes")
-        return
-    }
-
 }
 
 extension HIDDevice {

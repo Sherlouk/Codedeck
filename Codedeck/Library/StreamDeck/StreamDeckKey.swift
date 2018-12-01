@@ -10,8 +10,15 @@ import Foundation
 
 public class StreamDeckKey {
     
-    enum Error: Swift.Error {
-        case rgbValueOutOfRange
+    enum Error: Swift.Error, LocalizedError {
+        case rgbValueOutOfRange(value: Int)
+        
+        var errorDescription: String? {
+            switch self {
+            case .rgbValueOutOfRange(let value):
+                return "RGB value was out of bounds (>= 0 and <= 255 was \(value))"
+            }
+        }
     }
     
     let streamDeck: StreamDeck
@@ -54,7 +61,7 @@ public class StreamDeckKey {
     
     private func assertRGBValue(_ value: Int) throws {
         guard (0...255).contains(value) else {
-            throw Error.rgbValueOutOfRange
+            throw Error.rgbValueOutOfRange(value: value)
         }
     }
     

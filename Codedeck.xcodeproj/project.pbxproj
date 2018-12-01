@@ -12,6 +12,8 @@
 		9840231C21B2062400A3CA96 /* IOHIDDevice+Write.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840231B21B2062400A3CA96 /* IOHIDDevice+Write.swift */; };
 		9840231F21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json in Resources */ = {isa = PBXBuildFile; fileRef = 9840231E21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json */; };
 		9840232121B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json in Resources */ = {isa = PBXBuildFile; fileRef = 9840232021B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json */; };
+		9840232321B21F3700A3CA96 /* XCTHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840232221B21F3700A3CA96 /* XCTHelperFunctions.swift */; };
+		9840232521B21F7F00A3CA96 /* StreamDeckProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840232421B21F7F00A3CA96 /* StreamDeckProductTests.swift */; };
 		989D5D2321AC2DEF0035489F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D2221AC2DEF0035489F /* AppDelegate.swift */; };
 		989D5D2521AC2DEF0035489F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D2421AC2DEF0035489F /* ViewController.swift */; };
 		989D5D2721AC2DF30035489F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989D5D2621AC2DF30035489F /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		9840231B21B2062400A3CA96 /* IOHIDDevice+Write.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+Write.swift"; sourceTree = "<group>"; };
 		9840231E21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fillColor-red-keyOne-pageOne.json"; sourceTree = "<group>"; };
 		9840232021B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fillColor-red-keyOne-pageTwo.json"; sourceTree = "<group>"; };
+		9840232221B21F3700A3CA96 /* XCTHelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTHelperFunctions.swift; sourceTree = "<group>"; };
+		9840232421B21F7F00A3CA96 /* StreamDeckProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckProductTests.swift; sourceTree = "<group>"; };
 		989D5D1F21AC2DEF0035489F /* Codedeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codedeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989D5D2221AC2DEF0035489F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		989D5D2421AC2DEF0035489F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				9840231D21B207CC00A3CA96 /* Resources */,
 				989D5D3521AC2DF30035489F /* CodedeckTests.swift */,
 				989D5D3721AC2DF30035489F /* Info.plist */,
+				9840232221B21F3700A3CA96 /* XCTHelperFunctions.swift */,
+				9840232421B21F7F00A3CA96 /* StreamDeckProductTests.swift */,
 			);
 			path = CodedeckTests;
 			sourceTree = "<group>";
@@ -345,7 +351,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9840232521B21F7F00A3CA96 /* StreamDeckProductTests.swift in Sources */,
 				989D5D3621AC2DF30035489F /* CodedeckTests.swift in Sources */,
+				9840232321B21F3700A3CA96 /* XCTHelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
