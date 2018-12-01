@@ -1,0 +1,6 @@
+framework module Codedeck {
+  umbrella header "Codedeck-umbrella.h"
+
+  export *
+  module * { export * }
+}

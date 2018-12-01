@@ -3,604 +3,824 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"Codedeck::CodedeckPackageTests::ProductTarget" /* CodedeckPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_70 /* Build configuration list for PBXAggregateTarget "CodedeckPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_73 /* PBXTargetDependency */,
+				OBJ_75 /* PBXTargetDependency */,
+			);
+			name = CodedeckPackageTests;
+			productName = CodedeckPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		9840231821B1FCBD00A3CA96 /* Data+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840231721B1FCBD00A3CA96 /* Data+Convenience.swift */; };
-		9840231A21B201F600A3CA96 /* RawDeviceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840231921B201F600A3CA96 /* RawDeviceProtocols.swift */; };
-		9840231C21B2062400A3CA96 /* IOHIDDevice+Write.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840231B21B2062400A3CA96 /* IOHIDDevice+Write.swift */; };
-		9840231F21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json in Resources */ = {isa = PBXBuildFile; fileRef = 9840231E21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json */; };
-		9840232121B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json in Resources */ = {isa = PBXBuildFile; fileRef = 9840232021B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json */; };
-		9840232321B21F3700A3CA96 /* XCTHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840232221B21F3700A3CA96 /* XCTHelperFunctions.swift */; };
-		9840232521B21F7F00A3CA96 /* StreamDeckProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840232421B21F7F00A3CA96 /* StreamDeckProductTests.swift */; };
-		989D5D2321AC2DEF0035489F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D2221AC2DEF0035489F /* AppDelegate.swift */; };
-		989D5D2521AC2DEF0035489F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D2421AC2DEF0035489F /* ViewController.swift */; };
-		989D5D2721AC2DF30035489F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989D5D2621AC2DF30035489F /* Assets.xcassets */; };
-		989D5D2A21AC2DF30035489F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989D5D2821AC2DF30035489F /* Main.storyboard */; };
-		989D5D3621AC2DF30035489F /* CodedeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D3521AC2DF30035489F /* CodedeckTests.swift */; };
-		989D5D4321AC309B0035489F /* HIDDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D4221AC309B0035489F /* HIDDevice.swift */; };
-		989D5D4621AC31AE0035489F /* IOHIDDevice+GetProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D4521AC31AE0035489F /* IOHIDDevice+GetProperty.swift */; };
-		989D5D4821AC31F40035489F /* HIDDeviceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D4721AC31F40035489F /* HIDDeviceMonitor.swift */; };
-		989D5D4B21AC32EE0035489F /* StreamDeckProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D4A21AC32EE0035489F /* StreamDeckProduct.swift */; };
-		989D5D4E21AC33C80035489F /* HIDDeviceMonitor+StreamDeckProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D4D21AC33C80035489F /* HIDDeviceMonitor+StreamDeckProducts.swift */; };
-		989D5D5021AC34740035489F /* IOHIDManager+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D4F21AC34740035489F /* IOHIDManager+Configure.swift */; };
-		989D5D5221AC37040035489F /* HIDDeviceMonitorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5121AC37040035489F /* HIDDeviceMonitorDelegate.swift */; };
-		989D5D5421AC38860035489F /* IOHIDDevice+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5321AC38860035489F /* IOHIDDevice+Configure.swift */; };
-		989D5D5621AC389F0035489F /* HIDDevice+Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5521AC389F0035489F /* HIDDevice+Reading.swift */; };
-		989D5D5821AC3C480035489F /* HIDDevice+StreamDeckProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5721AC3C480035489F /* HIDDevice+StreamDeckProduct.swift */; };
-		989D5D5A21AC3D640035489F /* StreamDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5921AC3D640035489F /* StreamDeck.swift */; };
-		989D5D5C21AC3E3C0035489F /* StreamDeckKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5B21AC3E3C0035489F /* StreamDeckKey.swift */; };
-		989D5D5E21AC3FB20035489F /* StreamDeckKey+Cocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D5D21AC3FB20035489F /* StreamDeckKey+Cocoa.swift */; };
-		989D5D6D21AC77640035489F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D6C21AC77640035489F /* Logger.swift */; };
-		989D5D6F21AC7BD70035489F /* IOHIDDevice+FeatureReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D6E21AC7BD70035489F /* IOHIDDevice+FeatureReport.swift */; };
+		OBJ_100 /* IOHIDManager+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* IOHIDManager+Configure.swift */; };
+		OBJ_101 /* HIDDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* HIDDevice.swift */; };
+		OBJ_102 /* HIDDeviceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* HIDDeviceMonitor.swift */; };
+		OBJ_103 /* HIDDeviceMonitorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* HIDDeviceMonitorDelegate.swift */; };
+		OBJ_104 /* RawDeviceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* RawDeviceProtocols.swift */; };
+		OBJ_110 /* HIDSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* HIDSwiftTests.swift */; };
+		OBJ_111 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* XCTestManifests.swift */; };
+		OBJ_113 /* HIDSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Codedeck::HIDSwift::Product" /* HIDSwift.framework */; };
+		OBJ_51 /* Data+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Data+Convenience.swift */; };
+		OBJ_52 /* HIDDevice+StreamDeckProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* HIDDevice+StreamDeckProduct.swift */; };
+		OBJ_53 /* HIDDeviceMonitor+StreamDeckProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* HIDDeviceMonitor+StreamDeckProducts.swift */; };
+		OBJ_54 /* StreamDeckKey+Cocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* StreamDeckKey+Cocoa.swift */; };
+		OBJ_55 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Logger.swift */; };
+		OBJ_56 /* StreamDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* StreamDeck.swift */; };
+		OBJ_57 /* StreamDeckKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* StreamDeckKey.swift */; };
+		OBJ_58 /* StreamDeckProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* StreamDeckProduct.swift */; };
+		OBJ_60 /* HIDSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Codedeck::HIDSwift::Product" /* HIDSwift.framework */; };
+		OBJ_68 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_81 /* CodedeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* CodedeckTests.swift */; };
+		OBJ_83 /* StreamDeckProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* StreamDeckProductTests.swift */; };
+		OBJ_84 /* XCTHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* XCTHelperFunctions.swift */; };
+		OBJ_85 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* XCTestManifests.swift */; };
+		OBJ_87 /* Codedeck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Codedeck::Codedeck::Product" /* Codedeck.framework */; };
+		OBJ_88 /* HIDSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Codedeck::HIDSwift::Product" /* HIDSwift.framework */; };
+		OBJ_95 /* HIDDevice+Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* HIDDevice+Reading.swift */; };
+		OBJ_96 /* IOHIDDevice+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* IOHIDDevice+Configure.swift */; };
+		OBJ_97 /* IOHIDDevice+FeatureReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* IOHIDDevice+FeatureReport.swift */; };
+		OBJ_98 /* IOHIDDevice+GetProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* IOHIDDevice+GetProperty.swift */; };
+		OBJ_99 /* IOHIDDevice+Write.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* IOHIDDevice+Write.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		989D5D3221AC2DF30035489F /* PBXContainerItemProxy */ = {
+		9840233421B314BD00A3CA96 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 989D5D1721AC2DEF0035489F /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 989D5D1E21AC2DEF0035489F;
+			remoteGlobalIDString = "Codedeck::HIDSwift";
+			remoteInfo = HIDSwift;
+		};
+		9840233521B314BD00A3CA96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Codedeck::Codedeck";
 			remoteInfo = Codedeck;
+		};
+		9840233621B314BD00A3CA96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Codedeck::HIDSwift";
+			remoteInfo = HIDSwift;
+		};
+		9840233721B314BD00A3CA96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Codedeck::HIDSwift";
+			remoteInfo = HIDSwift;
+		};
+		9840233821B314BE00A3CA96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Codedeck::CodedeckTests";
+			remoteInfo = CodedeckTests;
+		};
+		9840233921B314BE00A3CA96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Codedeck::HIDSwiftTests";
+			remoteInfo = HIDSwiftTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9840231721B1FCBD00A3CA96 /* Data+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Convenience.swift"; sourceTree = "<group>"; };
-		9840231921B201F600A3CA96 /* RawDeviceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDeviceProtocols.swift; sourceTree = "<group>"; };
-		9840231B21B2062400A3CA96 /* IOHIDDevice+Write.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+Write.swift"; sourceTree = "<group>"; };
-		9840231E21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fillColor-red-keyOne-pageOne.json"; sourceTree = "<group>"; };
-		9840232021B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fillColor-red-keyOne-pageTwo.json"; sourceTree = "<group>"; };
-		9840232221B21F3700A3CA96 /* XCTHelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTHelperFunctions.swift; sourceTree = "<group>"; };
-		9840232421B21F7F00A3CA96 /* StreamDeckProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckProductTests.swift; sourceTree = "<group>"; };
-		989D5D1F21AC2DEF0035489F /* Codedeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codedeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		989D5D2221AC2DEF0035489F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		989D5D2421AC2DEF0035489F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		989D5D2621AC2DF30035489F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		989D5D2921AC2DF30035489F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		989D5D2B21AC2DF30035489F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		989D5D2C21AC2DF30035489F /* Codedeck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Codedeck.entitlements; sourceTree = "<group>"; };
-		989D5D3121AC2DF30035489F /* CodedeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodedeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		989D5D3521AC2DF30035489F /* CodedeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedeckTests.swift; sourceTree = "<group>"; };
-		989D5D3721AC2DF30035489F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		989D5D4221AC309B0035489F /* HIDDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDDevice.swift; sourceTree = "<group>"; };
-		989D5D4521AC31AE0035489F /* IOHIDDevice+GetProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+GetProperty.swift"; sourceTree = "<group>"; };
-		989D5D4721AC31F40035489F /* HIDDeviceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDDeviceMonitor.swift; sourceTree = "<group>"; };
-		989D5D4A21AC32EE0035489F /* StreamDeckProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckProduct.swift; sourceTree = "<group>"; };
-		989D5D4D21AC33C80035489F /* HIDDeviceMonitor+StreamDeckProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIDDeviceMonitor+StreamDeckProducts.swift"; sourceTree = "<group>"; };
-		989D5D4F21AC34740035489F /* IOHIDManager+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDManager+Configure.swift"; sourceTree = "<group>"; };
-		989D5D5121AC37040035489F /* HIDDeviceMonitorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDDeviceMonitorDelegate.swift; sourceTree = "<group>"; };
-		989D5D5321AC38860035489F /* IOHIDDevice+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+Configure.swift"; sourceTree = "<group>"; };
-		989D5D5521AC389F0035489F /* HIDDevice+Reading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIDDevice+Reading.swift"; sourceTree = "<group>"; };
-		989D5D5721AC3C480035489F /* HIDDevice+StreamDeckProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIDDevice+StreamDeckProduct.swift"; sourceTree = "<group>"; };
-		989D5D5921AC3D640035489F /* StreamDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeck.swift; sourceTree = "<group>"; };
-		989D5D5B21AC3E3C0035489F /* StreamDeckKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckKey.swift; sourceTree = "<group>"; };
-		989D5D5D21AC3FB20035489F /* StreamDeckKey+Cocoa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StreamDeckKey+Cocoa.swift"; sourceTree = "<group>"; };
-		989D5D6C21AC77640035489F /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		989D5D6E21AC7BD70035489F /* IOHIDDevice+FeatureReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+FeatureReport.swift"; sourceTree = "<group>"; };
+		"Codedeck::Codedeck::Product" /* Codedeck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Codedeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Codedeck::CodedeckTests::Product" /* CodedeckTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CodedeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Codedeck::HIDSwift::Product" /* HIDSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HIDSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Codedeck::HIDSwiftTests::Product" /* HIDSwiftTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = HIDSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* Data+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Convenience.swift"; sourceTree = "<group>"; };
+		OBJ_11 /* HIDDevice+StreamDeckProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIDDevice+StreamDeckProduct.swift"; sourceTree = "<group>"; };
+		OBJ_12 /* HIDDeviceMonitor+StreamDeckProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIDDeviceMonitor+StreamDeckProducts.swift"; sourceTree = "<group>"; };
+		OBJ_13 /* StreamDeckKey+Cocoa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StreamDeckKey+Cocoa.swift"; sourceTree = "<group>"; };
+		OBJ_15 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		OBJ_16 /* StreamDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeck.swift; sourceTree = "<group>"; };
+		OBJ_17 /* StreamDeckKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckKey.swift; sourceTree = "<group>"; };
+		OBJ_18 /* StreamDeckProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckProduct.swift; sourceTree = "<group>"; };
+		OBJ_21 /* HIDDevice+Reading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIDDevice+Reading.swift"; sourceTree = "<group>"; };
+		OBJ_22 /* IOHIDDevice+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+Configure.swift"; sourceTree = "<group>"; };
+		OBJ_23 /* IOHIDDevice+FeatureReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+FeatureReport.swift"; sourceTree = "<group>"; };
+		OBJ_24 /* IOHIDDevice+GetProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+GetProperty.swift"; sourceTree = "<group>"; };
+		OBJ_25 /* IOHIDDevice+Write.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+Write.swift"; sourceTree = "<group>"; };
+		OBJ_26 /* IOHIDManager+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDManager+Configure.swift"; sourceTree = "<group>"; };
+		OBJ_27 /* HIDDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDDevice.swift; sourceTree = "<group>"; };
+		OBJ_28 /* HIDDeviceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDDeviceMonitor.swift; sourceTree = "<group>"; };
+		OBJ_29 /* HIDDeviceMonitorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDDeviceMonitorDelegate.swift; sourceTree = "<group>"; };
+		OBJ_30 /* RawDeviceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDeviceProtocols.swift; sourceTree = "<group>"; };
+		OBJ_33 /* CodedeckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodedeckTests.swift; sourceTree = "<group>"; };
+		OBJ_35 /* StreamDeckProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckProductTests.swift; sourceTree = "<group>"; };
+		OBJ_36 /* XCTHelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTHelperFunctions.swift; sourceTree = "<group>"; };
+		OBJ_37 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_39 /* HIDSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDSwiftTests.swift; sourceTree = "<group>"; };
+		OBJ_40 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		989D5D1C21AC2DEF0035489F /* Frameworks */ = {
+		OBJ_105 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		989D5D2E21AC2DF30035489F /* Frameworks */ = {
+		OBJ_112 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
+				OBJ_113 /* HIDSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_60 /* HIDSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_87 /* Codedeck.framework in Frameworks */,
+				OBJ_88 /* HIDSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9840231D21B207CC00A3CA96 /* Resources */ = {
+		OBJ_14 /* Logging */ = {
 			isa = PBXGroup;
 			children = (
-				9840231E21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json */,
-				9840232021B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		989D5D1621AC2DEF0035489F = {
-			isa = PBXGroup;
-			children = (
-				989D5D2121AC2DEF0035489F /* Codedeck */,
-				989D5D3421AC2DF30035489F /* CodedeckTests */,
-				989D5D2021AC2DEF0035489F /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		989D5D2021AC2DEF0035489F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				989D5D1F21AC2DEF0035489F /* Codedeck.app */,
-				989D5D3121AC2DF30035489F /* CodedeckTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		989D5D2121AC2DEF0035489F /* Codedeck */ = {
-			isa = PBXGroup;
-			children = (
-				989D5D4021AC30030035489F /* Library */,
-				989D5D2221AC2DEF0035489F /* AppDelegate.swift */,
-				989D5D2421AC2DEF0035489F /* ViewController.swift */,
-				989D5D2621AC2DF30035489F /* Assets.xcassets */,
-				989D5D2821AC2DF30035489F /* Main.storyboard */,
-				989D5D2B21AC2DF30035489F /* Info.plist */,
-				989D5D2C21AC2DF30035489F /* Codedeck.entitlements */,
-			);
-			path = Codedeck;
-			sourceTree = "<group>";
-		};
-		989D5D3421AC2DF30035489F /* CodedeckTests */ = {
-			isa = PBXGroup;
-			children = (
-				9840231D21B207CC00A3CA96 /* Resources */,
-				989D5D3521AC2DF30035489F /* CodedeckTests.swift */,
-				989D5D3721AC2DF30035489F /* Info.plist */,
-				9840232221B21F3700A3CA96 /* XCTHelperFunctions.swift */,
-				9840232421B21F7F00A3CA96 /* StreamDeckProductTests.swift */,
-			);
-			path = CodedeckTests;
-			sourceTree = "<group>";
-		};
-		989D5D4021AC30030035489F /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				989D5D6B21AC77530035489F /* Logging */,
-				989D5D4921AC32E40035489F /* StreamDeck */,
-				989D5D4121AC300E0035489F /* HID */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
-		989D5D4121AC300E0035489F /* HID */ = {
-			isa = PBXGroup;
-			children = (
-				989D5D4421AC319E0035489F /* Extensions */,
-				989D5D4221AC309B0035489F /* HIDDevice.swift */,
-				989D5D4721AC31F40035489F /* HIDDeviceMonitor.swift */,
-				989D5D5121AC37040035489F /* HIDDeviceMonitorDelegate.swift */,
-				9840231921B201F600A3CA96 /* RawDeviceProtocols.swift */,
-			);
-			path = HID;
-			sourceTree = "<group>";
-		};
-		989D5D4421AC319E0035489F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				989D5D4521AC31AE0035489F /* IOHIDDevice+GetProperty.swift */,
-				989D5D4F21AC34740035489F /* IOHIDManager+Configure.swift */,
-				989D5D5321AC38860035489F /* IOHIDDevice+Configure.swift */,
-				989D5D5521AC389F0035489F /* HIDDevice+Reading.swift */,
-				989D5D6E21AC7BD70035489F /* IOHIDDevice+FeatureReport.swift */,
-				9840231B21B2062400A3CA96 /* IOHIDDevice+Write.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		989D5D4921AC32E40035489F /* StreamDeck */ = {
-			isa = PBXGroup;
-			children = (
-				989D5D4C21AC33BE0035489F /* Extensions */,
-				989D5D4A21AC32EE0035489F /* StreamDeckProduct.swift */,
-				989D5D5921AC3D640035489F /* StreamDeck.swift */,
-				989D5D5B21AC3E3C0035489F /* StreamDeckKey.swift */,
-			);
-			path = StreamDeck;
-			sourceTree = "<group>";
-		};
-		989D5D4C21AC33BE0035489F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				989D5D4D21AC33C80035489F /* HIDDeviceMonitor+StreamDeckProducts.swift */,
-				989D5D5721AC3C480035489F /* HIDDevice+StreamDeckProduct.swift */,
-				989D5D5D21AC3FB20035489F /* StreamDeckKey+Cocoa.swift */,
-				9840231721B1FCBD00A3CA96 /* Data+Convenience.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		989D5D6B21AC77530035489F /* Logging */ = {
-			isa = PBXGroup;
-			children = (
-				989D5D6C21AC77640035489F /* Logger.swift */,
+				OBJ_15 /* Logger.swift */,
 			);
 			path = Logging;
+			sourceTree = "<group>";
+		};
+		OBJ_19 /* HIDSwift */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_20 /* Extensions */,
+				OBJ_27 /* HIDDevice.swift */,
+				OBJ_28 /* HIDDeviceMonitor.swift */,
+				OBJ_29 /* HIDDeviceMonitorDelegate.swift */,
+				OBJ_30 /* RawDeviceProtocols.swift */,
+			);
+			name = HIDSwift;
+			path = Sources/HIDSwift;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_20 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_21 /* HIDDevice+Reading.swift */,
+				OBJ_22 /* IOHIDDevice+Configure.swift */,
+				OBJ_23 /* IOHIDDevice+FeatureReport.swift */,
+				OBJ_24 /* IOHIDDevice+GetProperty.swift */,
+				OBJ_25 /* IOHIDDevice+Write.swift */,
+				OBJ_26 /* IOHIDManager+Configure.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		OBJ_31 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_32 /* CodedeckTests */,
+				OBJ_38 /* HIDSwiftTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_32 /* CodedeckTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* CodedeckTests.swift */,
+				OBJ_35 /* StreamDeckProductTests.swift */,
+				OBJ_36 /* XCTHelperFunctions.swift */,
+				OBJ_37 /* XCTestManifests.swift */,
+			);
+			name = CodedeckTests;
+			path = Tests/CodedeckTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_38 /* HIDSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_39 /* HIDSwiftTests.swift */,
+				OBJ_40 /* XCTestManifests.swift */,
+			);
+			name = HIDSwiftTests;
+			path = Tests/HIDSwiftTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Codedeck::CodedeckTests::Product" /* CodedeckTests.xctest */,
+				"Codedeck::HIDSwift::Product" /* HIDSwift.framework */,
+				"Codedeck::HIDSwiftTests::Product" /* HIDSwiftTests.xctest */,
+				"Codedeck::Codedeck::Product" /* Codedeck.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_31 /* Tests */,
+				OBJ_41 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* Codedeck */,
+				OBJ_19 /* HIDSwift */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* Codedeck */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Extensions */,
+				OBJ_14 /* Logging */,
+				OBJ_16 /* StreamDeck.swift */,
+				OBJ_17 /* StreamDeckKey.swift */,
+				OBJ_18 /* StreamDeckProduct.swift */,
+			);
+			name = Codedeck;
+			path = Sources/Codedeck;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* Data+Convenience.swift */,
+				OBJ_11 /* HIDDevice+StreamDeckProduct.swift */,
+				OBJ_12 /* HIDDeviceMonitor+StreamDeckProducts.swift */,
+				OBJ_13 /* StreamDeckKey+Cocoa.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		989D5D1E21AC2DEF0035489F /* Codedeck */ = {
+		"Codedeck::Codedeck" /* Codedeck */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 989D5D3A21AC2DF30035489F /* Build configuration list for PBXNativeTarget "Codedeck" */;
+			buildConfigurationList = OBJ_47 /* Build configuration list for PBXNativeTarget "Codedeck" */;
 			buildPhases = (
-				989D5D1B21AC2DEF0035489F /* Sources */,
-				989D5D1C21AC2DEF0035489F /* Frameworks */,
-				989D5D1D21AC2DEF0035489F /* Resources */,
+				OBJ_50 /* Sources */,
+				OBJ_59 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_61 /* PBXTargetDependency */,
 			);
 			name = Codedeck;
 			productName = Codedeck;
-			productReference = 989D5D1F21AC2DEF0035489F /* Codedeck.app */;
-			productType = "com.apple.product-type.application";
+			productReference = "Codedeck::Codedeck::Product" /* Codedeck.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		989D5D3021AC2DF30035489F /* CodedeckTests */ = {
+		"Codedeck::CodedeckTests" /* CodedeckTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 989D5D3D21AC2DF30035489F /* Build configuration list for PBXNativeTarget "CodedeckTests" */;
+			buildConfigurationList = OBJ_77 /* Build configuration list for PBXNativeTarget "CodedeckTests" */;
 			buildPhases = (
-				989D5D2D21AC2DF30035489F /* Sources */,
-				989D5D2E21AC2DF30035489F /* Frameworks */,
-				989D5D2F21AC2DF30035489F /* Resources */,
+				OBJ_80 /* Sources */,
+				OBJ_86 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				989D5D3321AC2DF30035489F /* PBXTargetDependency */,
+				OBJ_89 /* PBXTargetDependency */,
+				OBJ_90 /* PBXTargetDependency */,
 			);
 			name = CodedeckTests;
 			productName = CodedeckTests;
-			productReference = 989D5D3121AC2DF30035489F /* CodedeckTests.xctest */;
+			productReference = "Codedeck::CodedeckTests::Product" /* CodedeckTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"Codedeck::HIDSwift" /* HIDSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_91 /* Build configuration list for PBXNativeTarget "HIDSwift" */;
+			buildPhases = (
+				OBJ_94 /* Sources */,
+				OBJ_105 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HIDSwift;
+			productName = HIDSwift;
+			productReference = "Codedeck::HIDSwift::Product" /* HIDSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Codedeck::HIDSwiftTests" /* HIDSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_106 /* Build configuration list for PBXNativeTarget "HIDSwiftTests" */;
+			buildPhases = (
+				OBJ_109 /* Sources */,
+				OBJ_112 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_114 /* PBXTargetDependency */,
+			);
+			name = HIDSwiftTests;
+			productName = HIDSwiftTests;
+			productReference = "Codedeck::HIDSwiftTests::Product" /* HIDSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"Codedeck::SwiftPMPackageDescription" /* CodedeckPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_64 /* Build configuration list for PBXNativeTarget "CodedeckPackageDescription" */;
+			buildPhases = (
+				OBJ_67 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodedeckPackageDescription;
+			productName = CodedeckPackageDescription;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		989D5D1721AC2DEF0035489F /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = Sherlouk;
-				TargetAttributes = {
-					989D5D1E21AC2DEF0035489F = {
-						CreatedOnToolsVersion = 10.1;
-						SystemCapabilities = {
-							com.apple.Sandbox = {
-								enabled = 1;
-							};
-						};
-					};
-					989D5D3021AC2DF30035489F = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 989D5D1E21AC2DEF0035489F;
-					};
-				};
+				LastUpgradeCheck = 9999;
 			};
-			buildConfigurationList = 989D5D1A21AC2DEF0035489F /* Build configuration list for PBXProject "Codedeck" */;
-			compatibilityVersion = "Xcode 10.0";
-			developmentRegion = en;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Codedeck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 989D5D1621AC2DEF0035489F;
-			productRefGroup = 989D5D2021AC2DEF0035489F /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				989D5D1E21AC2DEF0035489F /* Codedeck */,
-				989D5D3021AC2DF30035489F /* CodedeckTests */,
+				"Codedeck::Codedeck" /* Codedeck */,
+				"Codedeck::SwiftPMPackageDescription" /* CodedeckPackageDescription */,
+				"Codedeck::CodedeckPackageTests::ProductTarget" /* CodedeckPackageTests */,
+				"Codedeck::CodedeckTests" /* CodedeckTests */,
+				"Codedeck::HIDSwift" /* HIDSwift */,
+				"Codedeck::HIDSwiftTests" /* HIDSwiftTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		989D5D1D21AC2DEF0035489F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				989D5D2721AC2DF30035489F /* Assets.xcassets in Resources */,
-				989D5D2A21AC2DF30035489F /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		989D5D2F21AC2DF30035489F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9840231F21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json in Resources */,
-				9840232121B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		989D5D1B21AC2DEF0035489F /* Sources */ = {
+		OBJ_109 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				989D5D5C21AC3E3C0035489F /* StreamDeckKey.swift in Sources */,
-				9840231C21B2062400A3CA96 /* IOHIDDevice+Write.swift in Sources */,
-				989D5D5821AC3C480035489F /* HIDDevice+StreamDeckProduct.swift in Sources */,
-				989D5D2521AC2DEF0035489F /* ViewController.swift in Sources */,
-				989D5D4E21AC33C80035489F /* HIDDeviceMonitor+StreamDeckProducts.swift in Sources */,
-				9840231A21B201F600A3CA96 /* RawDeviceProtocols.swift in Sources */,
-				989D5D4821AC31F40035489F /* HIDDeviceMonitor.swift in Sources */,
-				989D5D5A21AC3D640035489F /* StreamDeck.swift in Sources */,
-				989D5D5221AC37040035489F /* HIDDeviceMonitorDelegate.swift in Sources */,
-				989D5D6F21AC7BD70035489F /* IOHIDDevice+FeatureReport.swift in Sources */,
-				989D5D6D21AC77640035489F /* Logger.swift in Sources */,
-				989D5D4B21AC32EE0035489F /* StreamDeckProduct.swift in Sources */,
-				989D5D5621AC389F0035489F /* HIDDevice+Reading.swift in Sources */,
-				989D5D5021AC34740035489F /* IOHIDManager+Configure.swift in Sources */,
-				989D5D5421AC38860035489F /* IOHIDDevice+Configure.swift in Sources */,
-				989D5D4621AC31AE0035489F /* IOHIDDevice+GetProperty.swift in Sources */,
-				989D5D5E21AC3FB20035489F /* StreamDeckKey+Cocoa.swift in Sources */,
-				9840231821B1FCBD00A3CA96 /* Data+Convenience.swift in Sources */,
-				989D5D2321AC2DEF0035489F /* AppDelegate.swift in Sources */,
-				989D5D4321AC309B0035489F /* HIDDevice.swift in Sources */,
+				OBJ_110 /* HIDSwiftTests.swift in Sources */,
+				OBJ_111 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		989D5D2D21AC2DF30035489F /* Sources */ = {
+		OBJ_50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				9840232521B21F7F00A3CA96 /* StreamDeckProductTests.swift in Sources */,
-				989D5D3621AC2DF30035489F /* CodedeckTests.swift in Sources */,
-				9840232321B21F3700A3CA96 /* XCTHelperFunctions.swift in Sources */,
+				OBJ_51 /* Data+Convenience.swift in Sources */,
+				OBJ_52 /* HIDDevice+StreamDeckProduct.swift in Sources */,
+				OBJ_53 /* HIDDeviceMonitor+StreamDeckProducts.swift in Sources */,
+				OBJ_54 /* StreamDeckKey+Cocoa.swift in Sources */,
+				OBJ_55 /* Logger.swift in Sources */,
+				OBJ_56 /* StreamDeck.swift in Sources */,
+				OBJ_57 /* StreamDeckKey.swift in Sources */,
+				OBJ_58 /* StreamDeckProduct.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_68 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_81 /* CodedeckTests.swift in Sources */,
+				OBJ_83 /* StreamDeckProductTests.swift in Sources */,
+				OBJ_84 /* XCTHelperFunctions.swift in Sources */,
+				OBJ_85 /* XCTestManifests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_95 /* HIDDevice+Reading.swift in Sources */,
+				OBJ_96 /* IOHIDDevice+Configure.swift in Sources */,
+				OBJ_97 /* IOHIDDevice+FeatureReport.swift in Sources */,
+				OBJ_98 /* IOHIDDevice+GetProperty.swift in Sources */,
+				OBJ_99 /* IOHIDDevice+Write.swift in Sources */,
+				OBJ_100 /* IOHIDManager+Configure.swift in Sources */,
+				OBJ_101 /* HIDDevice.swift in Sources */,
+				OBJ_102 /* HIDDeviceMonitor.swift in Sources */,
+				OBJ_103 /* HIDDeviceMonitorDelegate.swift in Sources */,
+				OBJ_104 /* RawDeviceProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		989D5D3321AC2DF30035489F /* PBXTargetDependency */ = {
+		OBJ_114 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 989D5D1E21AC2DEF0035489F /* Codedeck */;
-			targetProxy = 989D5D3221AC2DF30035489F /* PBXContainerItemProxy */;
+			target = "Codedeck::HIDSwift" /* HIDSwift */;
+			targetProxy = 9840233721B314BD00A3CA96 /* PBXContainerItemProxy */;
+		};
+		OBJ_61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Codedeck::HIDSwift" /* HIDSwift */;
+			targetProxy = 9840233421B314BD00A3CA96 /* PBXContainerItemProxy */;
+		};
+		OBJ_73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Codedeck::CodedeckTests" /* CodedeckTests */;
+			targetProxy = 9840233821B314BE00A3CA96 /* PBXContainerItemProxy */;
+		};
+		OBJ_75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Codedeck::HIDSwiftTests" /* HIDSwiftTests */;
+			targetProxy = 9840233921B314BE00A3CA96 /* PBXContainerItemProxy */;
+		};
+		OBJ_89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Codedeck::Codedeck" /* Codedeck */;
+			targetProxy = 9840233521B314BD00A3CA96 /* PBXContainerItemProxy */;
+		};
+		OBJ_90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Codedeck::HIDSwift" /* HIDSwift */;
+			targetProxy = 9840233621B314BD00A3CA96 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		989D5D2821AC2DF30035489F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				989D5D2921AC2DF30035489F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		989D5D3821AC2DF30035489F /* Debug */ = {
+		OBJ_107 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Codedeck.xcodeproj/HIDSwiftTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = HIDSwiftTests;
+			};
+			name = Debug;
+		};
+		OBJ_108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Codedeck.xcodeproj/HIDSwiftTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = HIDSwiftTests;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		989D5D3921AC2DF30035489F /* Release */ = {
+		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COPY_PHASE_STRIP = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
-		989D5D3B21AC2DF30035489F /* Debug */ = {
+		OBJ_48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Codedeck/Codedeck.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Codedeck/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uk.sherlo.Codedeck;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Codedeck.xcodeproj/Codedeck_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Codedeck;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Codedeck;
+			};
+			name = Debug;
+		};
+		OBJ_49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Codedeck.xcodeproj/Codedeck_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Codedeck;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Codedeck;
+			};
+			name = Release;
+		};
+		OBJ_65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode101.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
-		989D5D3C21AC2DF30035489F /* Release */ = {
+		OBJ_66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Codedeck/Codedeck.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Codedeck/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = uk.sherlo.Codedeck;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode101.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
-		989D5D3E21AC2DF30035489F /* Debug */ = {
+		OBJ_71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = CodedeckTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = uk.sherlo.CodedeckTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Codedeck.app/Contents/MacOS/Codedeck";
 			};
 			name = Debug;
 		};
-		989D5D3F21AC2DF30035489F /* Release */ = {
+		OBJ_72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = CodedeckTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
+			};
+			name = Release;
+		};
+		OBJ_78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uk.sherlo.CodedeckTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Codedeck.xcodeproj/CodedeckTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Codedeck.app/Contents/MacOS/Codedeck";
+				TARGET_NAME = CodedeckTests;
+			};
+			name = Debug;
+		};
+		OBJ_79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Codedeck.xcodeproj/CodedeckTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = CodedeckTests;
+			};
+			name = Release;
+		};
+		OBJ_92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Codedeck.xcodeproj/HIDSwift_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = HIDSwift;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = HIDSwift;
+			};
+			name = Debug;
+		};
+		OBJ_93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Codedeck.xcodeproj/HIDSwift_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = HIDSwift;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = HIDSwift;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		989D5D1A21AC2DEF0035489F /* Build configuration list for PBXProject "Codedeck" */ = {
+		OBJ_106 /* Build configuration list for PBXNativeTarget "HIDSwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				989D5D3821AC2DF30035489F /* Debug */,
-				989D5D3921AC2DF30035489F /* Release */,
+				OBJ_107 /* Debug */,
+				OBJ_108 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		989D5D3A21AC2DF30035489F /* Build configuration list for PBXNativeTarget "Codedeck" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "Codedeck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				989D5D3B21AC2DF30035489F /* Debug */,
-				989D5D3C21AC2DF30035489F /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		989D5D3D21AC2DF30035489F /* Build configuration list for PBXNativeTarget "CodedeckTests" */ = {
+		OBJ_47 /* Build configuration list for PBXNativeTarget "Codedeck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				989D5D3E21AC2DF30035489F /* Debug */,
-				989D5D3F21AC2DF30035489F /* Release */,
+				OBJ_48 /* Debug */,
+				OBJ_49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_64 /* Build configuration list for PBXNativeTarget "CodedeckPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_65 /* Debug */,
+				OBJ_66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_70 /* Build configuration list for PBXAggregateTarget "CodedeckPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_71 /* Debug */,
+				OBJ_72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_77 /* Build configuration list for PBXNativeTarget "CodedeckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_78 /* Debug */,
+				OBJ_79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_91 /* Build configuration list for PBXNativeTarget "HIDSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_92 /* Debug */,
+				OBJ_93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 989D5D1721AC2DEF0035489F /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }

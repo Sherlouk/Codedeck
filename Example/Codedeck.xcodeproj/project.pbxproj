@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8732E29FBA26F76FAAC4BD32 /* Pods_Codedeck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7B0A98357B509A950378F8 /* Pods_Codedeck.framework */; };
+		9840234721B315A000A3CA96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840234621B315A000A3CA96 /* AppDelegate.swift */; };
+		9840234921B315A000A3CA96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840234821B315A000A3CA96 /* ViewController.swift */; };
+		9840234B21B315AB00A3CA96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9840234A21B315AB00A3CA96 /* Assets.xcassets */; };
+		9840234E21B315AB00A3CA96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9840234C21B315AB00A3CA96 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E7B0A98357B509A950378F8 /* Pods_Codedeck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Codedeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9840234321B315A000A3CA96 /* Codedeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codedeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9840234621B315A000A3CA96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9840234821B315A000A3CA96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9840234A21B315AB00A3CA96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9840234D21B315AB00A3CA96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9840234F21B315AB00A3CA96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9840235021B315AB00A3CA96 /* Codedeck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Codedeck.entitlements; sourceTree = "<group>"; };
+		A25167186BE9C34AFB9D131B /* Pods-Codedeck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Codedeck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Codedeck/Pods-Codedeck.debug.xcconfig"; sourceTree = "<group>"; };
+		EC7CC33D7AF4A8A6460E54CA /* Pods-Codedeck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Codedeck.release.xcconfig"; path = "Pods/Target Support Files/Pods-Codedeck/Pods-Codedeck.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9840234021B315A000A3CA96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8732E29FBA26F76FAAC4BD32 /* Pods_Codedeck.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6942C6031E03EFBCE5FD00E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E7B0A98357B509A950378F8 /* Pods_Codedeck.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9840233A21B315A000A3CA96 = {
+			isa = PBXGroup;
+			children = (
+				9840234521B315A000A3CA96 /* Codedeck */,
+				9840234421B315A000A3CA96 /* Products */,
+				E68A6A0EB20B16035BCFFBF2 /* Pods */,
+				6942C6031E03EFBCE5FD00E4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9840234421B315A000A3CA96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9840234321B315A000A3CA96 /* Codedeck.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9840234521B315A000A3CA96 /* Codedeck */ = {
+			isa = PBXGroup;
+			children = (
+				9840234621B315A000A3CA96 /* AppDelegate.swift */,
+				9840234821B315A000A3CA96 /* ViewController.swift */,
+				9840234A21B315AB00A3CA96 /* Assets.xcassets */,
+				9840234C21B315AB00A3CA96 /* Main.storyboard */,
+				9840234F21B315AB00A3CA96 /* Info.plist */,
+				9840235021B315AB00A3CA96 /* Codedeck.entitlements */,
+			);
+			path = Codedeck;
+			sourceTree = "<group>";
+		};
+		E68A6A0EB20B16035BCFFBF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A25167186BE9C34AFB9D131B /* Pods-Codedeck.debug.xcconfig */,
+				EC7CC33D7AF4A8A6460E54CA /* Pods-Codedeck.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9840234221B315A000A3CA96 /* Codedeck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9840235321B315AB00A3CA96 /* Build configuration list for PBXNativeTarget "Codedeck" */;
+			buildPhases = (
+				9840235621B31A4800A3CA96 /* [CP] Patch */,
+				66351B5C7BBF7E69C219DCB2 /* [CP] Check Pods Manifest.lock */,
+				9840233F21B315A000A3CA96 /* Sources */,
+				9840234021B315A000A3CA96 /* Frameworks */,
+				9840234121B315A000A3CA96 /* Resources */,
+				32C9AA7D7A0F3ADCA59A22E9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Codedeck;
+			productName = Codedeck;
+			productReference = 9840234321B315A000A3CA96 /* Codedeck.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9840233B21B315A000A3CA96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Sherlouk;
+				TargetAttributes = {
+					9840234221B315A000A3CA96 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 9840233E21B315A000A3CA96 /* Build configuration list for PBXProject "Codedeck" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9840233A21B315A000A3CA96;
+			productRefGroup = 9840234421B315A000A3CA96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9840234221B315A000A3CA96 /* Codedeck */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9840234121B315A000A3CA96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9840234B21B315AB00A3CA96 /* Assets.xcassets in Resources */,
+				9840234E21B315AB00A3CA96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32C9AA7D7A0F3ADCA59A22E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Codedeck/Pods-Codedeck-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Codedeck/Codedeck.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Codedeck.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Codedeck/Pods-Codedeck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66351B5C7BBF7E69C219DCB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Codedeck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9840235621B31A4800A3CA96 /* [CP] Patch */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Patch";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export EXPANDED_CODE_SIGN_IDENTITY=\"\"\nexport EXPANDED_CODE_SIGN_IDENTITY_NAME=\"\"\nexport EXPANDED_PROVISIONING_PROFILE=\"\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9840233F21B315A000A3CA96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9840234921B315A000A3CA96 /* ViewController.swift in Sources */,
+				9840234721B315A000A3CA96 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9840234C21B315AB00A3CA96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9840234D21B315AB00A3CA96 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9840235121B315AB00A3CA96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9840235221B315AB00A3CA96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		9840235421B315AB00A3CA96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A25167186BE9C34AFB9D131B /* Pods-Codedeck.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Codedeck/Codedeck.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y7J92F92X4;
+				INFOPLIST_FILE = Codedeck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.sherlo.Codedeck;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		9840235521B315AB00A3CA96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC7CC33D7AF4A8A6460E54CA /* Pods-Codedeck.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Codedeck/Codedeck.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y7J92F92X4;
+				INFOPLIST_FILE = Codedeck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.sherlo.Codedeck;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9840233E21B315A000A3CA96 /* Build configuration list for PBXProject "Codedeck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9840235121B315AB00A3CA96 /* Debug */,
+				9840235221B315AB00A3CA96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9840235321B315AB00A3CA96 /* Build configuration list for PBXNativeTarget "Codedeck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9840235421B315AB00A3CA96 /* Debug */,
+				9840235521B315AB00A3CA96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9840233B21B315A000A3CA96 /* Project object */;
+}

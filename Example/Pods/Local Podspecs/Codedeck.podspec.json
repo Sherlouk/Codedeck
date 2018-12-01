@@ -1,0 +1,36 @@
+{
+  "name": "Codedeck",
+  "version": "0.0.1",
+  "summary": "A Swift library for interfacing with the Elgato Stream Deck",
+  "description": "A Swift library for interfacing with and creating custom\nfunctionality with the Elgato Stream Deck!",
+  "homepage": "https://github.com/Sherlouk/Codedeck",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": "James Sherlock",
+  "source": {
+    "git": "https://github.com/Sherlouk/Codedeck.git",
+    "tag": "0.0.1"
+  },
+  "social_media_url": "https://twitter.com/JamesSherlouk",
+  "platforms": {
+    "osx": "10.10"
+  },
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "HIDSwift",
+      "source_files": "Sources/HIDSwift/**/*"
+    },
+    {
+      "name": "Core",
+      "dependencies": {
+        "Codedeck/HIDSwift": [
+
+        ]
+      },
+      "source_files": "Sources/Codedeck/**/*"
+    }
+  ]
+}

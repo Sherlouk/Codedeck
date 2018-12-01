@@ -1,0 +1,18 @@
+//
+//  HIDDeviceMonitor+StreamDeckProducts.swift
+//  Codedeck
+//
+//  Created by Sherlock, James on 26/11/2018.
+//  Copyright © 2018 Sherlouk. All rights reserved.
+//
+
+import Foundation
+import HIDSwift
+
+public extension HIDDeviceMonitor {
+    
+    public convenience init(streamDeckProducts: [StreamDeckProduct] = StreamDeckProduct.allCases) {
+        self.init(searchableProducts: streamDeckProducts.map({ $0.productInformation() }))
+    }
+    
+}

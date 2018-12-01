@@ -1,5 +1,7 @@
 # Codedeck
 
+[![Coverage Status](https://coveralls.io/repos/github/Sherlouk/Codedeck/badge.svg?branch=master)](https://coveralls.io/github/Sherlouk/Codedeck?branch=master)
+
 A Swift library for interfacing with an Elgato StreamDeck.
 
 ## Work in Progress
