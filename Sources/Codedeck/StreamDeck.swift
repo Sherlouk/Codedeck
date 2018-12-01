@@ -11,9 +11,16 @@ import HIDSwift
 
 public class StreamDeck {
     
-    public enum Error: Swift.Error {
+    public enum Error: Swift.Error, LocalizedError {
         case keyIndexOutOfRange
         case brightnessOutOfRange
+        
+        public var localizedDescription: String {
+            switch self {
+            case .keyIndexOutOfRange: return "Key Index out of bounds"
+            case .brightnessOutOfRange: return "Brightness out of bounds"
+            }
+        }
     }
     
     let device: HIDDevice
@@ -73,7 +80,7 @@ public class StreamDeck {
     
     // Reading
     
-    private func receiveDataFromDevice(data: Data) {
+    internal func receiveDataFromDevice(data: Data) {
         guard data.count == product.keyCount + 2 else {
             Logger.error("Data received from device was not correct size (\(data.count) != \(product.keyCount + 2))")
             return
@@ -87,6 +94,8 @@ public class StreamDeck {
         for (keyIndex, keyValue) in keyData.enumerated() {
             keysPressed[keyIndex] = keyValue == 1
         }
+        
+        // End of functional logic, just printing out the pressed key to console
         
         let currentKeysPressed = keysPressed.filter({ $0.value })
             

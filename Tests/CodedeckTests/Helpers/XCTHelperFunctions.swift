@@ -20,7 +20,7 @@ func XCTAssertThrowsErrorMatching<T>(_ expression: @autoclosure () throws -> T, 
 func XCTAssertDataFromJSON(data: Data, jsonName: String) {
     
     let optionalUrl: URL? = {
-        let currentBundle = Bundle(for: CodedeckTests.self)
+        let currentBundle = Bundle(for: StreamDeckSetColorTests.self)
         
         if let url = currentBundle.url(forResource: jsonName, withExtension: "json") {
             return url
