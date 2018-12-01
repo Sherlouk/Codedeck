@@ -13,7 +13,7 @@ extension HIDDevice {
     public func startReading(callback: @escaping ReadingCallback) {
         self.readingCallback = callback
         
-        let inputCallback : IOHIDReportCallback = { inContext, inResult, inSender, type, reportId, report, reportLength in
+        let inputCallback: IOHIDReportCallback = { inContext, inResult, inSender, type, reportId, report, reportLength in
             let this = unsafeBitCast(inContext, to: HIDDevice.self)
             this.read(reportId: reportId, report: report, reportLength: reportLength)
         }

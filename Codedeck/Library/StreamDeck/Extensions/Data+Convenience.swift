@@ -33,7 +33,7 @@ extension Data {
     }
     
     func repeated(count: Int) -> Data {
-        return Data.init(repeating: self, count: count)
+        return Data.init(repeating: [UInt8](self), count: count)
     }
     
 }

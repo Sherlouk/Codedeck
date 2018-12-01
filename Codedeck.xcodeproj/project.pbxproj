@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9840231821B1FCBD00A3CA96 /* Data+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840231721B1FCBD00A3CA96 /* Data+Convenience.swift */; };
+		9840231A21B201F600A3CA96 /* RawDeviceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840231921B201F600A3CA96 /* RawDeviceProtocols.swift */; };
+		9840231C21B2062400A3CA96 /* IOHIDDevice+Write.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840231B21B2062400A3CA96 /* IOHIDDevice+Write.swift */; };
+		9840231F21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json in Resources */ = {isa = PBXBuildFile; fileRef = 9840231E21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json */; };
+		9840232121B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json in Resources */ = {isa = PBXBuildFile; fileRef = 9840232021B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json */; };
 		989D5D2321AC2DEF0035489F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D2221AC2DEF0035489F /* AppDelegate.swift */; };
 		989D5D2521AC2DEF0035489F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D2421AC2DEF0035489F /* ViewController.swift */; };
 		989D5D2721AC2DF30035489F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 989D5D2621AC2DF30035489F /* Assets.xcassets */; };
@@ -42,6 +46,10 @@
 
 /* Begin PBXFileReference section */
 		9840231721B1FCBD00A3CA96 /* Data+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Convenience.swift"; sourceTree = "<group>"; };
+		9840231921B201F600A3CA96 /* RawDeviceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDeviceProtocols.swift; sourceTree = "<group>"; };
+		9840231B21B2062400A3CA96 /* IOHIDDevice+Write.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+Write.swift"; sourceTree = "<group>"; };
+		9840231E21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fillColor-red-keyOne-pageOne.json"; sourceTree = "<group>"; };
+		9840232021B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fillColor-red-keyOne-pageTwo.json"; sourceTree = "<group>"; };
 		989D5D1F21AC2DEF0035489F /* Codedeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codedeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989D5D2221AC2DEF0035489F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		989D5D2421AC2DEF0035489F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9840231D21B207CC00A3CA96 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9840231E21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json */,
+				9840232021B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		989D5D1621AC2DEF0035489F = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +139,7 @@
 		989D5D3421AC2DF30035489F /* CodedeckTests */ = {
 			isa = PBXGroup;
 			children = (
+				9840231D21B207CC00A3CA96 /* Resources */,
 				989D5D3521AC2DF30035489F /* CodedeckTests.swift */,
 				989D5D3721AC2DF30035489F /* Info.plist */,
 			);
@@ -145,6 +163,7 @@
 				989D5D4221AC309B0035489F /* HIDDevice.swift */,
 				989D5D4721AC31F40035489F /* HIDDeviceMonitor.swift */,
 				989D5D5121AC37040035489F /* HIDDeviceMonitorDelegate.swift */,
+				9840231921B201F600A3CA96 /* RawDeviceProtocols.swift */,
 			);
 			path = HID;
 			sourceTree = "<group>";
@@ -157,6 +176,7 @@
 				989D5D5321AC38860035489F /* IOHIDDevice+Configure.swift */,
 				989D5D5521AC389F0035489F /* HIDDevice+Reading.swift */,
 				989D5D6E21AC7BD70035489F /* IOHIDDevice+FeatureReport.swift */,
+				9840231B21B2062400A3CA96 /* IOHIDDevice+Write.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -286,6 +306,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9840231F21B207FD00A3CA96 /* fillColor-red-keyOne-pageOne.json in Resources */,
+				9840232121B2081A00A3CA96 /* fillColor-red-keyOne-pageTwo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,9 +319,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				989D5D5C21AC3E3C0035489F /* StreamDeckKey.swift in Sources */,
+				9840231C21B2062400A3CA96 /* IOHIDDevice+Write.swift in Sources */,
 				989D5D5821AC3C480035489F /* HIDDevice+StreamDeckProduct.swift in Sources */,
 				989D5D2521AC2DEF0035489F /* ViewController.swift in Sources */,
 				989D5D4E21AC33C80035489F /* HIDDeviceMonitor+StreamDeckProducts.swift in Sources */,
+				9840231A21B201F600A3CA96 /* RawDeviceProtocols.swift in Sources */,
 				989D5D4821AC31F40035489F /* HIDDeviceMonitor.swift in Sources */,
 				989D5D5A21AC3D640035489F /* StreamDeck.swift in Sources */,
 				989D5D5221AC37040035489F /* HIDDeviceMonitorDelegate.swift in Sources */,

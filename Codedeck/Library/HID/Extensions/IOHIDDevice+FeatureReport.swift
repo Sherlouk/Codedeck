@@ -13,7 +13,7 @@ extension IOHIDDevice {
     
     // WIP
     
-    func getFeatureReport(reportSize: Int) {
+    public func getFeatureReport(reportSize: Int) {
 //        print("get feature report \(reportSize)")
 //        var reportSizePointer = reportSize
 //        let report = UnsafeMutablePointer<UInt8>.allocate(capacity: reportSize)
@@ -29,7 +29,7 @@ extension IOHIDDevice {
 //        print(returnValue == kIOReturnUnsupported)
     }
     
-    func sendFeatureReport(reportSize: Int, data: Data) {
+    public func sendFeatureReport(reportSize: Int, data: Data) {
         print("send feature report \(reportSize)")
         print(String(data: data, encoding: .utf8))
 //        let report = [UInt8](data)

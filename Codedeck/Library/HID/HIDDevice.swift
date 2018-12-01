@@ -12,6 +12,7 @@ import IOKit.hid
 public class HIDDevice {
     
     public typealias ReadingCallback = (Data) -> ()
+    public typealias RawDevice = ReadDevice & WriteDevice & FeatureReportDevice
     
     /// Unique identifier of Device, dynamic
     public let id: Int
@@ -32,7 +33,7 @@ public class HIDDevice {
     public let serialNumber: String
     
     /// Reference back to raw IOKit Device
-    public let device: IOHIDDevice
+    public let device: RawDevice
     
     /// Callback used to obtain data in realtime from the device
     internal var readingCallback: ReadingCallback?
@@ -46,6 +47,16 @@ public class HIDDevice {
         productId = try device.getProperty(key: kIOHIDProductIDKey)
         reportSize = try device.getProperty(key: kIOHIDMaxInputReportSizeKey)
         serialNumber = try device.getProperty(key: kIOHIDSerialNumberKey)
+    }
+    
+    internal init(id: Int, name: String, vendorId: Int, productId: Int, reportSize: Int, serialNumber: String, device: RawDevice) {
+        self.id = id
+        self.name = name
+        self.vendorId = vendorId
+        self.productId = productId
+        self.reportSize = reportSize
+        self.serialNumber = serialNumber
+        self.device = device
     }
     
     /// Basic description of the device with all parameters listed
@@ -67,15 +78,8 @@ public class HIDDevice {
         device.sendFeatureReport(reportSize: reportSize, data: data)
     }
     
-    // Block to enable overridding from tests
-    internal var writeBlock: (Data) -> () = { _ in 
-        // TODO https://github.com/Arti3DPlayer/USBDeviceSwift/blob/master/RaceflightControllerHIDExample/RaceflightControllerHIDExample/RFDevice.swift#L26
-    }
-    
     public func write(data: Data) {
-        
-        print(data.count)
-        writeBlock(data)
+        device.write(data: data)
     }
     
 }

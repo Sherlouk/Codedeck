@@ -11,7 +11,7 @@ import IOKit.hid
 
 extension IOHIDDevice {
     
-    func registerInputReportCallback(reportSize: Int, callback: @escaping IOHIDReportCallback, context: UnsafeMutableRawPointer?) {
+    public func registerInputReportCallback(reportSize: Int, callback: @escaping IOHIDReportCallback, context: UnsafeMutableRawPointer?) {
         let report = UnsafeMutablePointer<UInt8>.allocate(capacity: reportSize)
         IOHIDDeviceRegisterInputReportCallback(self, report, reportSize, callback, context)
     }
