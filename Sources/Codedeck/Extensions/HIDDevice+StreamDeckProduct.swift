@@ -11,9 +11,15 @@ import HIDSwift
 
 public extension HIDDevice {
     
-    public enum Error: Swift.Error {
+    public enum Error: Swift.Error, LocalizedError {
         // notStreamDeckProduct: - HIDDevice is not a known StreamDeck product
         case notStreamDeckProduct
+        
+        public var localizedDescription: String {
+            switch self {
+            case .notStreamDeckProduct: return "Not a StreamDeck Product"
+            }
+        }
     }
     
     public func makeStreamDeckProduct() throws -> StreamDeckProduct {

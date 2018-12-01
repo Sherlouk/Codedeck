@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Codedeck
+@testable import HIDSwift
 
 class StreamDeckProductTests: XCTestCase {
     
@@ -38,6 +39,20 @@ class StreamDeckProductTests: XCTestCase {
         XCTAssertEqual(StreamDeckProduct.streamDeckMini.productInformation().vendorId, 0x0fd9)
     }
     
+    func testInvalidProduct() {
+        let testDevice = HIDDevice(
+            id: 0,
+            name: "Not a Stream Deck",
+            vendorId: 0,
+            productId: 0,
+            reportSize: 17,
+            serialNumber: "abcdef",
+            device: TestDevice()
+        )
+        
+        XCTAssertThrowsErrorMatching(try testDevice.makeStreamDeckProduct(), error: HIDDevice.Error.notStreamDeckProduct)
+    }
+    
     func testCaseIterable() {
         // This test is primarily a way to force an error should we ever add other products
         XCTAssertEqual(StreamDeckProduct.allCases, [.streamDeck, .streamDeckMini])
@@ -50,6 +65,7 @@ class StreamDeckProductTests: XCTestCase {
         ("testKeyCount", testKeyCount),
         ("testProductInformation", testProductInformation),
         ("testCaseIterable", testCaseIterable),
+        ("testInvalidProduct", testInvalidProduct),
     ]
 
 }

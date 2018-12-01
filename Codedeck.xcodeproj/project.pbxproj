@@ -30,6 +30,7 @@
 		9840236621B335D000A3CA96 /* fillColor-clear-keyOne-pageTwo.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9840236321B335C800A3CA96 /* fillColor-clear-keyOne-pageTwo.json */; };
 		9840236821B3371D00A3CA96 /* StreamDeckKeyPressedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840236721B3371D00A3CA96 /* StreamDeckKeyPressedTests.swift */; };
 		9840236A21B33A2B00A3CA96 /* StreamDeckCreateKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840236921B33A2B00A3CA96 /* StreamDeckCreateKeyTests.swift */; };
+		9840236C21B33CEC00A3CA96 /* DataConvenienceExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840236B21B33CEC00A3CA96 /* DataConvenienceExtensionsTests.swift */; };
 		OBJ_100 /* IOHIDManager+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* IOHIDManager+Configure.swift */; };
 		OBJ_101 /* HIDDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* HIDDevice.swift */; };
 		OBJ_102 /* HIDDeviceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* HIDDeviceMonitor.swift */; };
@@ -130,6 +131,7 @@
 		9840236421B335C800A3CA96 /* fillColor-clear-keyOne-pageOne.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "fillColor-clear-keyOne-pageOne.json"; sourceTree = "<group>"; };
 		9840236721B3371D00A3CA96 /* StreamDeckKeyPressedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckKeyPressedTests.swift; sourceTree = "<group>"; };
 		9840236921B33A2B00A3CA96 /* StreamDeckCreateKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckCreateKeyTests.swift; sourceTree = "<group>"; };
+		9840236B21B33CEC00A3CA96 /* DataConvenienceExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConvenienceExtensionsTests.swift; sourceTree = "<group>"; };
 		"Codedeck::Codedeck::Product" /* Codedeck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Codedeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Codedeck::CodedeckTests::Product" /* CodedeckTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CodedeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Codedeck::HIDSwift::Product" /* HIDSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HIDSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +227,7 @@
 				OBJ_35 /* StreamDeckProductTests.swift */,
 				9840236721B3371D00A3CA96 /* StreamDeckKeyPressedTests.swift */,
 				9840236921B33A2B00A3CA96 /* StreamDeckCreateKeyTests.swift */,
+				9840236B21B33CEC00A3CA96 /* DataConvenienceExtensionsTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				9840236821B3371D00A3CA96 /* StreamDeckKeyPressedTests.swift in Sources */,
 				OBJ_84 /* XCTHelperFunctions.swift in Sources */,
 				OBJ_85 /* XCTestManifests.swift in Sources */,
+				9840236C21B33CEC00A3CA96 /* DataConvenienceExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
