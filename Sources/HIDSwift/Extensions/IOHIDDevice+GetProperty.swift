@@ -13,7 +13,7 @@ extension IOHIDDevice {
     
     enum Error: Swift.Error {
         case failedToFindProperty
-        case mismatchPropertyType(expected: String, actual: String) // TODO: Expected/Actual types
+        case mismatchPropertyType(expected: String, actual: String)
     }
     
     func getProperty<T>(key: String) throws -> T {

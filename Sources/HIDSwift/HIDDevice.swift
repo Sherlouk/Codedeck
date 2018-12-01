@@ -11,8 +11,12 @@ import IOKit.hid
 
 public class HIDDevice {
     
+    // MARK: - Definitions
+    
     public typealias ReadingCallback = (Data) -> ()
     public typealias RawDevice = ReadDevice & WriteDevice & FeatureReportDevice
+    
+    // MARK: - Variables
     
     /// Unique identifier of Device, dynamic
     public let id: Int
@@ -38,6 +42,9 @@ public class HIDDevice {
     /// Callback used to obtain data in realtime from the device
     internal var readingCallback: ReadingCallback?
     
+    // MARK: - Initialisation
+    
+    /// Create a HIDDevice with a system IOHIDDevice
     internal init(device: IOHIDDevice) throws {
         self.device = device
         
@@ -49,6 +56,7 @@ public class HIDDevice {
         serialNumber = try device.getProperty(key: kIOHIDSerialNumberKey)
     }
     
+    /// Creates a HIDDevice from individual information primarily used by testing
     internal init(id: Int, name: String, vendorId: Int, productId: Int, reportSize: Int, serialNumber: String, device: RawDevice) {
         self.id = id
         self.name = name
@@ -58,6 +66,8 @@ public class HIDDevice {
         self.serialNumber = serialNumber
         self.device = device
     }
+    
+    // MARK: - Description
     
     /// Basic description of the device with all parameters listed
     public var description: String {
@@ -70,6 +80,8 @@ public class HIDDevice {
         """
     }
     
+    // MARK: - Public
+    
     public func getFeatureReport(callback: () -> ()) {
         device.getFeatureReport(reportSize: reportSize)
     }
@@ -80,6 +92,25 @@ public class HIDDevice {
     
     public func write(data: Data) {
         device.write(data: data)
+    }
+    
+    public func startReading(callback: @escaping ReadingCallback) {
+        self.readingCallback = callback
+        
+        let inputCallback: IOHIDReportCallback = { inContext, inResult, inSender, type, reportId, report, reportLength in
+            let this = unsafeBitCast(inContext, to: HIDDevice.self)
+            this.read(reportId: reportId, report: report, reportLength: reportLength)
+        }
+        
+        let context = unsafeBitCast(self, to: UnsafeMutableRawPointer.self)
+        device.registerInputReportCallback(reportSize: reportSize, callback: inputCallback, context: context)
+    }
+    
+    // MARK: - Private
+    
+    private func read(reportId: UInt32, report: UnsafeMutablePointer<UInt8>, reportLength: CFIndex) {
+        let data = Data(bytes: UnsafePointer<UInt8>(report), count: reportLength)
+        readingCallback?(data)
     }
     
 }

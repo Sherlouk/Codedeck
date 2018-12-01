@@ -22,6 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		9840235B21B3279500A3CA96 /* fillColor-red-keyOne-pageOne.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9840235821B326E800A3CA96 /* fillColor-red-keyOne-pageOne.json */; };
+		9840235C21B3279500A3CA96 /* fillColor-red-keyOne-pageTwo.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9840235921B326E800A3CA96 /* fillColor-red-keyOne-pageTwo.json */; };
 		OBJ_100 /* IOHIDManager+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* IOHIDManager+Configure.swift */; };
 		OBJ_101 /* HIDDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* HIDDevice.swift */; };
 		OBJ_102 /* HIDDeviceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* HIDDeviceMonitor.swift */; };
@@ -46,7 +48,6 @@
 		OBJ_85 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* XCTestManifests.swift */; };
 		OBJ_87 /* Codedeck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Codedeck::Codedeck::Product" /* Codedeck.framework */; };
 		OBJ_88 /* HIDSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Codedeck::HIDSwift::Product" /* HIDSwift.framework */; };
-		OBJ_95 /* HIDDevice+Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* HIDDevice+Reading.swift */; };
 		OBJ_96 /* IOHIDDevice+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* IOHIDDevice+Configure.swift */; };
 		OBJ_97 /* IOHIDDevice+FeatureReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* IOHIDDevice+FeatureReport.swift */; };
 		OBJ_98 /* IOHIDDevice+GetProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* IOHIDDevice+GetProperty.swift */; };
@@ -98,7 +99,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9840235A21B3278D00A3CA96 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				9840235B21B3279500A3CA96 /* fillColor-red-keyOne-pageOne.json in CopyFiles */,
+				9840235C21B3279500A3CA96 /* fillColor-red-keyOne-pageTwo.json in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9840235821B326E800A3CA96 /* fillColor-red-keyOne-pageOne.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "fillColor-red-keyOne-pageOne.json"; sourceTree = "<group>"; };
+		9840235921B326E800A3CA96 /* fillColor-red-keyOne-pageTwo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "fillColor-red-keyOne-pageTwo.json"; sourceTree = "<group>"; };
 		"Codedeck::Codedeck::Product" /* Codedeck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Codedeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Codedeck::CodedeckTests::Product" /* CodedeckTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CodedeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Codedeck::HIDSwift::Product" /* HIDSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HIDSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +128,6 @@
 		OBJ_16 /* StreamDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeck.swift; sourceTree = "<group>"; };
 		OBJ_17 /* StreamDeckKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckKey.swift; sourceTree = "<group>"; };
 		OBJ_18 /* StreamDeckProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckProduct.swift; sourceTree = "<group>"; };
-		OBJ_21 /* HIDDevice+Reading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIDDevice+Reading.swift"; sourceTree = "<group>"; };
 		OBJ_22 /* IOHIDDevice+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+Configure.swift"; sourceTree = "<group>"; };
 		OBJ_23 /* IOHIDDevice+FeatureReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+FeatureReport.swift"; sourceTree = "<group>"; };
 		OBJ_24 /* IOHIDDevice+GetProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IOHIDDevice+GetProperty.swift"; sourceTree = "<group>"; };
@@ -166,6 +182,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9840235721B326E800A3CA96 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9840235821B326E800A3CA96 /* fillColor-red-keyOne-pageOne.json */,
+				9840235921B326E800A3CA96 /* fillColor-red-keyOne-pageTwo.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		OBJ_14 /* Logging */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +215,6 @@
 		OBJ_20 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_21 /* HIDDevice+Reading.swift */,
 				OBJ_22 /* IOHIDDevice+Configure.swift */,
 				OBJ_23 /* IOHIDDevice+FeatureReport.swift */,
 				OBJ_24 /* IOHIDDevice+GetProperty.swift */,
@@ -212,6 +236,7 @@
 		OBJ_32 /* CodedeckTests */ = {
 			isa = PBXGroup;
 			children = (
+				9840235721B326E800A3CA96 /* Resources */,
 				OBJ_33 /* CodedeckTests.swift */,
 				OBJ_35 /* StreamDeckProductTests.swift */,
 				OBJ_36 /* XCTHelperFunctions.swift */,
@@ -242,7 +267,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -250,7 +275,6 @@
 				OBJ_31 /* Tests */,
 				OBJ_41 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -312,6 +336,7 @@
 			buildPhases = (
 				OBJ_80 /* Sources */,
 				OBJ_86 /* Frameworks */,
+				9840235A21B3278D00A3CA96 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -386,7 +411,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -449,7 +474,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_95 /* HIDDevice+Reading.swift in Sources */,
 				OBJ_96 /* IOHIDDevice+Configure.swift in Sources */,
 				OBJ_97 /* IOHIDDevice+FeatureReport.swift in Sources */,
 				OBJ_98 /* IOHIDDevice+GetProperty.swift in Sources */,

@@ -22,10 +22,10 @@ public class HIDDeviceMonitor {
     
     // Variables
     
-    let products: [ProductInformation]
-    var monitoringThread: Thread?
-    weak var delegate: HIDDeviceMonitorDelegate?
-    var knownDevices = [String: HIDDevice]()
+    private let products: [ProductInformation]
+    private var monitoringThread: Thread?
+    private weak var delegate: HIDDeviceMonitorDelegate?
+    public var knownDevices = [String: HIDDevice]()
     
     // Lifecycle
     
@@ -39,6 +39,8 @@ public class HIDDeviceMonitor {
     
     // Public
     
+    /// Starts watching out for devices on new thread.
+    /// Delegate receives device connection/disconnection events.
     public func startMonitoring(delegate: HIDDeviceMonitorDelegate) {
         self.delegate = delegate
         
@@ -46,6 +48,7 @@ public class HIDDeviceMonitor {
         monitoringThread?.start()
     }
     
+    /// Stops watching out for devices and cleans up thread.
     public func stopMonitoring() {
         monitoringThread?.cancel()
         monitoringThread = nil

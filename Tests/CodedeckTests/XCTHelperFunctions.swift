@@ -18,13 +18,24 @@ func XCTAssertThrowsErrorMatching<T>(_ expression: @autoclosure () throws -> T, 
 }
 
 func XCTAssertDataFromJSON(data: Data, jsonName: String) {
-    // This is a highly fragile (and hopefully temporary) solution for obtaining the resources directory
-    // suitable when running `swift test`. It fails when run via Xcode. Open to change this!
     
-    let currentBundle = Bundle(for: CodedeckTests.self)
-    let resourceBundle = Bundle(path: "\(currentBundle.bundlePath)/../../../../Tests/CodedeckTests/Resources")
+    let optionalUrl: URL? = {
+        let currentBundle = Bundle(for: CodedeckTests.self)
+        
+        if let url = currentBundle.url(forResource: jsonName, withExtension: "json") {
+            return url
+        }
+        
+        let resourceBundle = Bundle(path: "\(currentBundle.bundlePath)/../../../../Tests/CodedeckTests/Resources")
+        
+        if let url = resourceBundle?.url(forResource: jsonName, withExtension: "json") {
+            return url
+        }
+        
+        return nil
+    }()
     
-    guard let url = resourceBundle?.url(forResource: jsonName, withExtension: "json") else {
+    guard let url = optionalUrl else {
         XCTFail("Failed to locate reference JSON file")
         return
     }
