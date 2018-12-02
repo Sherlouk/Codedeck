@@ -11,9 +11,13 @@ import Foundation
 extension IOHIDDevice {
     
     public func write(data: Data) {
-        // TODO https://github.com/Arti3DPlayer/USBDeviceSwift/blob/master/RaceflightControllerHIDExample/RaceflightControllerHIDExample/RFDevice.swift#L26
-        
-        print(data.count)
+        IOHIDDeviceSetReport(
+            self,
+            kIOHIDReportTypeOutput,
+            CFIndex(0),
+            [UInt8](data),
+            data.count
+        )
     }
     
 }
