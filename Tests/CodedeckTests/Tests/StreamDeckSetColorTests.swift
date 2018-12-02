@@ -35,7 +35,7 @@ class StreamDeckSetColorTests: XCTestCase {
         
         let device = HIDDevice.makeMockStreamDeck(rawDevice: testDevice)
         let streamDeck = try! StreamDeck(device: device)
-        XCTAssertNoThrow(try streamDeck.key(for: 1).setColor(red: 255, green: 0, blue: 0))
+        XCTAssertNoThrow(try streamDeck.key(for: 4).setColor(red: 255, green: 0, blue: 0))
         
         waitForExpectations(timeout: 0.1, handler: nil)
     }
@@ -63,7 +63,7 @@ class StreamDeckSetColorTests: XCTestCase {
         
         let device = HIDDevice.makeMockStreamDeck(rawDevice: testDevice)
         let streamDeck = try! StreamDeck(device: device)
-        XCTAssertNoThrow(try streamDeck.key(for: 1).clear())
+        XCTAssertNoThrow(try streamDeck.key(for: 4).clear())
         
         waitForExpectations(timeout: 0.1, handler: nil)
     }
@@ -72,7 +72,7 @@ class StreamDeckSetColorTests: XCTestCase {
         let device = HIDDevice.makeMockStreamDeck(rawDevice: TestDevice())
         let streamDeck = try! StreamDeck(device: device)
         
-        let key = try! streamDeck.key(for: 0)
+        let key = try! streamDeck.key(for: 1)
         let errorOne = StreamDeckKey.Error.rgbValueOutOfRange(value: 300)
         let errorTwo = StreamDeckKey.Error.rgbValueOutOfRange(value: -1)
         

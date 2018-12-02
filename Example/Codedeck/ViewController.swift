@@ -38,7 +38,7 @@ extension ViewController: HIDDeviceMonitorDelegate {
             
             let streamDeck = try StreamDeck(device: device)
             try streamDeck.clearAllKeys()
-            
+
             try streamDeck.allKeys().forEach({
                 try $0.setColor(
                     red: Int.random(in: 0...255),
@@ -47,10 +47,10 @@ extension ViewController: HIDDeviceMonitorDelegate {
                 )
             })
             
+            try streamDeck.key(for: 1).setColor(color: .red)
+
             try streamDeck.setBrightness(50)
-//            streamDeck.device.getFeatureReport {
-//                print("report")
-//            }
+//            streamDeck.reset()
         } catch {
             print(error)
         }

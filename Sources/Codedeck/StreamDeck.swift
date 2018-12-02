@@ -39,6 +39,11 @@ public class StreamDeck {
     
     // Public
     
+    /// Sets the brightness of the entire panel
+    ///
+    /// Brightness should be between 0 and 100
+    ///
+    /// You can not set the brightness of an individual key
     public func setBrightness(_ brightness: Int) throws {
         guard (0...100).contains(brightness) else {
             throw Error.brightnessOutOfRange
@@ -52,17 +57,35 @@ public class StreamDeck {
         Logger.success("Set Brightness to \(brightness)%")
     }
     
+    /// Shows the default Elgato logo spread across the keys
+    public func reset() {
+        let bytes: [UInt8] = [0x0B, 0x63]
+        var data = Data(bytes: bytes)
+        data.pad(toLength: device.reportSize)
+        
+        device.sendFeatureReport(data: data)
+    }
+    
+    /// Clears all keys by setting them to a black color
+    ///
+    /// See: `key(for:).clear()` to clear an individual key
     public func clearAllKeys() throws {
         try allKeys().forEach {
             try $0.clear()
         }
     }
     
+    /// Returns the key at the given index throwing an error if out of bounds
     public func key(for index: Int) throws -> StreamDeckKey {
-        try assertKeyInRange(index)
-        return StreamDeckKey(streamDeck: self, keyIndex: index)
+        guard let mappedIndex = StreamDeckKeyMapper().userToDeviceMapping[index] else {
+            throw Error.keyIndexOutOfRange
+        }
+        
+        try assertKeyInRange(mappedIndex)
+        return StreamDeckKey(streamDeck: self, keyIndex: mappedIndex)
     }
     
+    /// Returns all of the keys safely
     public func allKeys() -> [StreamDeckKey] {
         return keysRange().map({
             StreamDeckKey(streamDeck: self, keyIndex: $0)
@@ -71,10 +94,14 @@ public class StreamDeck {
     
     // Private
     
+    /// Returns the range of the available keys on this device
     private func keysRange() -> Range<Int> {
         return 0 ..< product.keyCount
     }
     
+    /// Validates that the key index is available on this device.
+    ///
+    /// Only throws an error if the key is not available
     private func assertKeyInRange(_ key: Int) throws {
         guard keysRange().contains(key) else {
             throw Error.keyIndexOutOfRange

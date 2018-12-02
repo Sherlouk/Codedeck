@@ -9,8 +9,8 @@
 import Foundation
 import XCTest
 
-func XCTAssertThrowsErrorMatching<T>(_ expression: @autoclosure () throws -> T, error expectedError: LocalizedError) {
-    XCTAssertThrowsError(expression) { error in
+func XCTAssertThrowsErrorMatching<T>(_ expression: @autoclosure () throws -> T, error expectedError: LocalizedError, file: StaticString = #file, line: UInt = #line) {
+    XCTAssertThrowsError(expression, file: file, line: line) { error in
         if expectedError.localizedDescription != error.localizedDescription {
             XCTFail("Error thrown but of incorrect type")
         }

@@ -43,7 +43,7 @@ extension IOHIDDevice {
         IOHIDDeviceSetReport(
             self,
             kIOHIDReportTypeFeature,
-            CFIndex(5),
+            CFIndex(data[0]),
             [UInt8](data),
             data.count
         )
