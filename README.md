@@ -1,8 +1,10 @@
 # Codedeck [![Coverage Status](https://coveralls.io/repos/github/Sherlouk/Codedeck/badge.svg?branch=master)](https://coveralls.io/github/Sherlouk/Codedeck?branch=master)
 
-A Swift library for interfacing with an Elgato StreamDeck.
-
-<p align="center"><img src="Resources/KeyNumbers.png" width="500" /></p>
+<p align="center">
+  A Swift library for interfacing with an Elgato StreamDeck.
+  <br /><br />
+  <img src="Resources/KeyNumbers.png" width="500" />
+</p>
 
 ## Features
 
@@ -31,10 +33,10 @@ This library provides a device monitoring solution which informs of you when
 certain devices are connected/disconnected from the system. This allows you to
 hotswap StreamDeck devices as well as connect to multiple at once!
 
-```
+```swift
 // 1. Create a device monitor and store a reference to it in your application
 var monitor: HIDDeviceMonitor = {
-        return HIDDeviceMonitor(streamDeckProducts: [ .streamDeck ])
+    return HIDDeviceMonitor(streamDeckProducts: [ .streamDeck ])
 }()
 
 // 2. Create a delegate class within your application
