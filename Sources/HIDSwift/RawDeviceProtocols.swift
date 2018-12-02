@@ -19,7 +19,7 @@ public protocol WriteDevice {
 
 public protocol FeatureReportDevice {
     func getFeatureReport(reportSize: Int)
-    func sendFeatureReport(reportSize: Int, data: Data)
+    func sendFeatureReport(data: Data)
 }
 
 extension IOHIDDevice: ReadDevice, WriteDevice, FeatureReportDevice {}

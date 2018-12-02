@@ -31,6 +31,8 @@
 		9840236821B3371D00A3CA96 /* StreamDeckKeyPressedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840236721B3371D00A3CA96 /* StreamDeckKeyPressedTests.swift */; };
 		9840236A21B33A2B00A3CA96 /* StreamDeckCreateKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840236921B33A2B00A3CA96 /* StreamDeckCreateKeyTests.swift */; };
 		9840236C21B33CEC00A3CA96 /* DataConvenienceExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840236B21B33CEC00A3CA96 /* DataConvenienceExtensionsTests.swift */; };
+		9840236E21B40C7000A3CA96 /* IOReturnMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840236D21B40C7000A3CA96 /* IOReturnMapper.swift */; };
+		9840237021B40C9000A3CA96 /* IOReturnMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840236F21B40C9000A3CA96 /* IOReturnMapperTests.swift */; };
 		OBJ_100 /* IOHIDManager+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* IOHIDManager+Configure.swift */; };
 		OBJ_101 /* HIDDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* HIDDevice.swift */; };
 		OBJ_102 /* HIDDeviceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* HIDDeviceMonitor.swift */; };
@@ -132,6 +134,8 @@
 		9840236721B3371D00A3CA96 /* StreamDeckKeyPressedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckKeyPressedTests.swift; sourceTree = "<group>"; };
 		9840236921B33A2B00A3CA96 /* StreamDeckCreateKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDeckCreateKeyTests.swift; sourceTree = "<group>"; };
 		9840236B21B33CEC00A3CA96 /* DataConvenienceExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConvenienceExtensionsTests.swift; sourceTree = "<group>"; };
+		9840236D21B40C7000A3CA96 /* IOReturnMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOReturnMapper.swift; sourceTree = "<group>"; };
+		9840236F21B40C9000A3CA96 /* IOReturnMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOReturnMapperTests.swift; sourceTree = "<group>"; };
 		"Codedeck::Codedeck::Product" /* Codedeck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Codedeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Codedeck::CodedeckTests::Product" /* CodedeckTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CodedeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Codedeck::HIDSwift::Product" /* HIDSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HIDSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +252,7 @@
 				OBJ_28 /* HIDDeviceMonitor.swift */,
 				OBJ_29 /* HIDDeviceMonitorDelegate.swift */,
 				OBJ_30 /* RawDeviceProtocols.swift */,
+				9840236D21B40C7000A3CA96 /* IOReturnMapper.swift */,
 			);
 			name = HIDSwift;
 			path = Sources/HIDSwift;
@@ -290,6 +295,7 @@
 			children = (
 				OBJ_39 /* HIDSwiftTests.swift */,
 				OBJ_40 /* XCTestManifests.swift */,
+				9840236F21B40C9000A3CA96 /* IOReturnMapperTests.swift */,
 			);
 			name = HIDSwiftTests;
 			path = Tests/HIDSwiftTests;
@@ -470,6 +476,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				9840237021B40C9000A3CA96 /* IOReturnMapperTests.swift in Sources */,
 				OBJ_110 /* HIDSwiftTests.swift in Sources */,
 				OBJ_111 /* XCTestManifests.swift in Sources */,
 			);
@@ -518,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				9840236E21B40C7000A3CA96 /* IOReturnMapper.swift in Sources */,
 				OBJ_96 /* IOHIDDevice+Configure.swift in Sources */,
 				OBJ_97 /* IOHIDDevice+FeatureReport.swift in Sources */,
 				OBJ_98 /* IOHIDDevice+GetProperty.swift in Sources */,

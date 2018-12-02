@@ -20,7 +20,7 @@ class TestDevice: ReadDevice, WriteDevice, FeatureReportDevice {
         
     }
     
-    func sendFeatureReport(reportSize: Int, data: Data) {
+    func sendFeatureReport(data: Data) {
         
     }
     

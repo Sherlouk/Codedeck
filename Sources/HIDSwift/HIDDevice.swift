@@ -87,7 +87,7 @@ public class HIDDevice {
     }
     
     public func sendFeatureReport(data: Data) {
-        device.sendFeatureReport(reportSize: reportSize, data: data)
+        device.sendFeatureReport(data: data)
     }
     
     public func write(data: Data) {
