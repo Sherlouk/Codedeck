@@ -94,8 +94,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9840235321B315AB00A3CA96 /* Build configuration list for PBXNativeTarget "Codedeck" */;
 			buildPhases = (
-				9840235621B31A4800A3CA96 /* [CP] Patch */,
 				66351B5C7BBF7E69C219DCB2 /* [CP] Check Pods Manifest.lock */,
+				9840235621B31A4800A3CA96 /* [CP] Patch */,
 				9840233F21B315A000A3CA96 /* Sources */,
 				9840234021B315A000A3CA96 /* Frameworks */,
 				9840234121B315A000A3CA96 /* Resources */,

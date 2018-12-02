@@ -7,7 +7,10 @@
 //
 
 import Foundation
+
+#if canImport(HIDSwift)
 import HIDSwift
+#endif
 
 public class StreamDeck {
     

@@ -19,6 +19,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         monitor.startMonitoring(delegate: self)
+        print("Started Monitoring")
     }
 
     override var representedObject: Any? {
@@ -37,6 +38,7 @@ extension ViewController: HIDDeviceMonitorDelegate {
             
             let streamDeck = try StreamDeck(device: device)
             try streamDeck.setBrightness(50)
+            
 //            streamDeck.device.getFeatureReport {
 //                print("report")
 //            }

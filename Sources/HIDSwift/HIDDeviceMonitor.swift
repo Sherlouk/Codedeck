@@ -22,7 +22,7 @@ public class HIDDeviceMonitor {
     
     // Variables
     
-    private let products: [ProductInformation]
+    internal let products: [ProductInformation]
     private var monitoringThread: Thread?
     private weak var delegate: HIDDeviceMonitorDelegate?
     public var knownDevices = [String: HIDDevice]()
