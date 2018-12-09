@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 public class StreamDeckKey {
     
@@ -52,6 +53,32 @@ public class StreamDeckKey {
         
         let firstPage = streamDeck.dataPageOne(keyIndex: keyIndex, data: data.repeated(count: StreamDeckKey.NUM_FIRST_PAGE_PIXELS))
         let secondPage = streamDeck.dataPageTwo(keyIndex: keyIndex, data: data.repeated(count: StreamDeckKey.NUM_SECOND_PAGE_PIXELS))
+        
+        streamDeck.write(data: firstPage)
+        streamDeck.write(data: secondPage)
+    }
+    
+    public func setImage(withActions actions: (CGContext) -> Void) {
+        guard let context = CGContext(data: nil, width: streamDeck.product.iconSize, height: streamDeck.product.iconSize, bitsPerComponent: 8, bytesPerRow: 0, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGImageAlphaInfo.none.rawValue) else {
+            fatalError("Could not create a context for StreamDeck")
+        }
+        
+        actions(context)
+        
+        guard let rawPointer = context.data else {
+            fatalError("Could not get data for the context")
+        }
+        
+        let numberOfBytes = context.height * context.bytesPerRow
+        
+        let buffer = UnsafeBufferPointer(start: rawPointer.bindMemory(to: UInt8.self, capacity: numberOfBytes), count: numberOfBytes)
+        let imageData = Data(buffer: buffer)
+        
+        let firstPageImageData = imageData[0 ..< StreamDeckKey.NUM_FIRST_PAGE_PIXELS]
+        let secondPageImageData = imageData[StreamDeckKey.NUM_FIRST_PAGE_PIXELS ..< StreamDeckKey.NUM_FIRST_PAGE_PIXELS + StreamDeckKey.NUM_SECOND_PAGE_PIXELS]
+        
+        let firstPage = streamDeck.dataPageOne(keyIndex: keyIndex, data: firstPageImageData)
+        let secondPage = streamDeck.dataPageTwo(keyIndex: keyIndex, data: secondPageImageData)
         
         streamDeck.write(data: firstPage)
         streamDeck.write(data: secondPage)
