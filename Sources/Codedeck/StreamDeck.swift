@@ -30,6 +30,9 @@ public class StreamDeck {
     let product: StreamDeckProduct
     var keysPressed = [Int: Bool]()
     
+    var onKeyDown: ((Int) -> Void)?
+    var onKeyUp: ((Int) -> Void)?
+    
     public init(device: HIDDevice) throws {
         self.device = device
         self.product = try device.makeStreamDeckProduct()
@@ -122,7 +125,19 @@ public class StreamDeck {
         let keyData = data[1 ..< (data.count - 1)]
         
         for (keyIndex, keyValue) in keyData.enumerated() {
-            keysPressed[keyIndex] = keyValue == 1
+            let isPressed = keyValue == 1
+            let oldValue = keysPressed[keyIndex]
+            
+            keysPressed[keyIndex] = isPressed
+            
+            if isPressed != oldValue {
+                if isPressed {
+                    onKeyDown?(keyIndex)
+                }
+                else {
+                    onKeyUp?(keyIndex)
+                }
+            }
         }
         
         // End of functional logic, just printing out the pressed key to console
