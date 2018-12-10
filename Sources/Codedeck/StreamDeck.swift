@@ -131,11 +131,15 @@ public class StreamDeck {
             keysPressed[keyIndex] = isPressed
             
             if isPressed != oldValue {
+                guard let userKeyIndex = StreamDeckKeyMapper().deviceToUserMapping[keyIndex] else {
+                    fatalError("Unknown key for given index.")
+                }
+                
                 if isPressed {
-                    onKeyDown?(keyIndex)
+                    onKeyDown?(userKeyIndex)
                 }
                 else {
-                    onKeyUp?(keyIndex)
+                    onKeyUp?(userKeyIndex)
                 }
             }
         }
