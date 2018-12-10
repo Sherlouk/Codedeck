@@ -30,8 +30,8 @@ public class StreamDeck {
     let product: StreamDeckProduct
     var keysPressed = [Int: Bool]()
     
-    var onKeyDown: ((Int) -> Void)?
-    var onKeyUp: ((Int) -> Void)?
+    public var onKeyDown: ((Int) -> Void)?
+    public var onKeyUp: ((Int) -> Void)?
     
     public init(device: HIDDevice) throws {
         self.device = device
