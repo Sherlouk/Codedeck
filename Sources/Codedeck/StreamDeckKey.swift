@@ -61,7 +61,7 @@ public class StreamDeckKey {
     public func setImage(withActions actions: (CGContext, CGSize) -> Void) {
         let contextSize = CGSize(width: streamDeck.product.iconSize, height: streamDeck.product.iconSize)
         
-        guard let context = CGContext(data: nil, width: contextSize.width, height: contextSize.height, bitsPerComponent: 8, bytesPerRow: 0, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGImageAlphaInfo.none.rawValue) else {
+        guard let context = CGContext(data: nil, width: Int(contextSize.width), height: Int(contextSize.height), bitsPerComponent: 8, bytesPerRow: 0, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGImageAlphaInfo.none.rawValue) else {
             fatalError("Could not create a context for StreamDeck")
         }
         
