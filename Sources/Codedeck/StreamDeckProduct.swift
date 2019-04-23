@@ -34,6 +34,11 @@ public enum StreamDeckProduct: CaseIterable {
         }
     }
     
+    public var dataCount: Int {
+        return 17
+    }
+    
+    
     // Internal
     
     internal var vendorId: Int {
@@ -47,6 +52,13 @@ public enum StreamDeckProduct: CaseIterable {
         switch self {
         case .streamDeck: return 0x0060
         case .streamDeckMini: return 0x0063
+        }
+    }
+    
+    internal var pagePacketSize: Int {
+        switch self {
+        case .streamDeck: return 8191
+        case .streamDeckMini: return 1024
         }
     }
     
