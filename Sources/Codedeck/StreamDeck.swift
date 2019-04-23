@@ -29,6 +29,7 @@ public class StreamDeck {
     let device: HIDDevice
     let product: StreamDeckProduct
     var keysPressed = [Int: Bool]()
+    var initialDataReceived = false
     
     public var onKeyDown: ((Int) -> Void)?
     public var onKeyUp: ((Int) -> Void)?
@@ -122,14 +123,17 @@ public class StreamDeck {
         // The first byte is the report ID
         // The last byte appears to be padding
         // We'll ignore these for now, the count should be equal to the key count.
-        // The mini is a different format than the standard.
         let keyData = data[1 ... (product.keyCount)]
+        let sendKeyCommands = initialDataReceived
         
         for (keyIndex, keyValue) in keyData.enumerated() {
             let isPressed = keyValue == 1
             let oldValue = keysPressed[keyIndex]
             
             keysPressed[keyIndex] = isPressed
+            
+            // don't fire callbacks on first load.
+            if !sendKeyCommands { continue }
             
             if isPressed != oldValue {
                 guard let userKeyIndex = StreamDeckKeyMapper(product: product).deviceToUserMapping[keyIndex] else {
@@ -144,7 +148,11 @@ public class StreamDeck {
                 }
             }
         }
-        
+        // prevents
+        if !initialDataReceived {
+            initialDataReceived = true
+            return
+        }
         // End of functional logic, just printing out the pressed key to console
         
         let currentKeysPressed = keysPressed.filter({ $0.value })
