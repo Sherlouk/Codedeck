@@ -80,7 +80,7 @@ public class StreamDeck {
     
     /// Returns the key at the given index throwing an error if out of bounds
     public func key(for index: Int) throws -> StreamDeckKey {
-        guard let mappedIndex = StreamDeckKeyMapper().userToDeviceMapping[index] else {
+        guard let mappedIndex = StreamDeckKeyMapper(product: product).userToDeviceMapping[index] else {
             throw Error.keyIndexOutOfRange
         }
         
@@ -131,7 +131,7 @@ public class StreamDeck {
             keysPressed[keyIndex] = isPressed
             
             if isPressed != oldValue {
-                guard let userKeyIndex = StreamDeckKeyMapper().deviceToUserMapping[keyIndex] else {
+                guard let userKeyIndex = StreamDeckKeyMapper(product: product).deviceToUserMapping[keyIndex] else {
                     fatalError("Unknown key for given index.")
                 }
                 
