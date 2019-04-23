@@ -123,7 +123,7 @@ public class StreamDeck {
         // The last byte appears to be padding
         // We'll ignore these for now, the count should be equal to the key count.
         // The mini is a different format than the standard.
-        let keyData = data[1 ..< (product.keyCount)]
+        let keyData = data[1 ... (product.keyCount)]
         
         for (keyIndex, keyValue) in keyData.enumerated() {
             let isPressed = keyValue == 1
