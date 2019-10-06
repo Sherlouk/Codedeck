@@ -54,7 +54,7 @@ public class StreamDeck {
         }
         
         let bytes: [UInt8] = [0x05, 0x55, 0xaa, 0xd1, 0x01, UInt8(brightness)]
-        var data = Data(bytes: bytes)
+        var data = Data(bytes)
         data.pad(toLength: device.reportSize)
         
         device.sendFeatureReport(data: data)
@@ -64,7 +64,7 @@ public class StreamDeck {
     /// Shows the default Elgato logo spread across the keys
     public func reset() {
         let bytes: [UInt8] = [0x0B, 0x63]
-        var data = Data(bytes: bytes)
+        var data = Data(bytes)
         data.pad(toLength: device.reportSize)
         
         device.sendFeatureReport(data: data)
@@ -204,7 +204,7 @@ public class StreamDeck {
             ]
         }
         
-        var pageOneData = Data(bytes: bytes)
+        var pageOneData = Data(bytes)
         pageOneData.append(data)
         pageOneData.pad(toLength: product.pagePacketSize)
         
@@ -230,7 +230,7 @@ public class StreamDeck {
         }
         
         
-        var pageTwoData = Data(bytes: bytes)
+        var pageTwoData = Data(bytes)
         pageTwoData.append(data)
         pageTwoData.pad(toLength: product.pagePacketSize)
         

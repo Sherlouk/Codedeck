@@ -49,7 +49,7 @@ public class StreamDeckKey {
         try assertRGBValue(blue)
         
         let bytes: [UInt8] = [blue, green, red].map({ UInt8($0) })
-        let data = Data(bytes: bytes)
+        let data = Data(bytes)
         
         switch streamDeck.product {
         case .streamDeck:

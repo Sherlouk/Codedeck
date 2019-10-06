@@ -14,7 +14,7 @@ import HIDSwift
 
 public extension HIDDevice {
     
-    public enum Error: Swift.Error, LocalizedError {
+    enum Error: Swift.Error, LocalizedError {
         // notStreamDeckProduct: - HIDDevice is not a known StreamDeck product
         case notStreamDeckProduct
         
@@ -25,7 +25,7 @@ public extension HIDDevice {
         }
     }
     
-    public func makeStreamDeckProduct() throws -> StreamDeckProduct {
+    func makeStreamDeckProduct() throws -> StreamDeckProduct {
         let product = StreamDeckProduct.allCases.first(where: {
             $0.vendorId == self.vendorId && $0.productId == self.productId
         })
