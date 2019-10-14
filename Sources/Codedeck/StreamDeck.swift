@@ -29,6 +29,10 @@ public class StreamDeck {
     let device: HIDDevice
     let product: StreamDeckProduct
     var keysPressed = [Int: Bool]()
+    var initialDataReceived = false
+    
+    public var onKeyDown: ((Int) -> Void)?
+    public var onKeyUp: ((Int) -> Void)?
     
     public init(device: HIDDevice) throws {
         self.device = device
@@ -50,7 +54,7 @@ public class StreamDeck {
         }
         
         let bytes: [UInt8] = [0x05, 0x55, 0xaa, 0xd1, 0x01, UInt8(brightness)]
-        var data = Data(bytes: bytes)
+        var data = Data(bytes)
         data.pad(toLength: device.reportSize)
         
         device.sendFeatureReport(data: data)
@@ -60,7 +64,7 @@ public class StreamDeck {
     /// Shows the default Elgato logo spread across the keys
     public func reset() {
         let bytes: [UInt8] = [0x0B, 0x63]
-        var data = Data(bytes: bytes)
+        var data = Data(bytes)
         data.pad(toLength: device.reportSize)
         
         device.sendFeatureReport(data: data)
@@ -77,7 +81,7 @@ public class StreamDeck {
     
     /// Returns the key at the given index throwing an error if out of bounds
     public func key(for index: Int) throws -> StreamDeckKey {
-        guard let mappedIndex = StreamDeckKeyMapper().userToDeviceMapping[index] else {
+        guard let mappedIndex = StreamDeckKeyMapper(product: product).userToDeviceMapping[index] else {
             throw Error.keyIndexOutOfRange
         }
         
@@ -111,24 +115,48 @@ public class StreamDeck {
     // Reading
     
     internal func receiveDataFromDevice(data: Data) {
-        guard data.count == product.keyCount + 2 else {
-            Logger.error("Data received from device was not correct size (\(data.count) != \(product.keyCount + 2))")
+        guard data.count == product.dataCount else {
+            Logger.error("Data received from device was not correct size (\(data.count) != \(product.dataCount))")
             return
         }
         
         // The first byte is the report ID
         // The last byte appears to be padding
         // We'll ignore these for now, the count should be equal to the key count.
-        let keyData = data[1 ..< (data.count - 1)]
+        let keyData = data[1 ... (product.keyCount)]
+        let sendKeyCommands = initialDataReceived
         
         for (keyIndex, keyValue) in keyData.enumerated() {
-            keysPressed[keyIndex] = keyValue == 1
+            let isPressed = keyValue == 1
+            let oldValue = keysPressed[keyIndex]
+            
+            keysPressed[keyIndex] = isPressed
+            
+            // don't fire callbacks on first load.
+            if !sendKeyCommands { continue }
+            
+            if isPressed != oldValue {
+                guard let userKeyIndex = StreamDeckKeyMapper(product: product).deviceToUserMapping[keyIndex] else {
+                    fatalError("Unknown key for given index.")
+                }
+                
+                if isPressed {
+                    onKeyDown?(userKeyIndex)
+                }
+                else {
+                    onKeyUp?(userKeyIndex)
+                }
+            }
         }
-        
+        // prevents
+        if !initialDataReceived {
+            initialDataReceived = true
+            return
+        }
         // End of functional logic, just printing out the pressed key to console
         
         let currentKeysPressed = keysPressed.filter({ $0.value })
-            
+        
         if currentKeysPressed.isEmpty {
             Logger.info("No Keys Pressed")
         } else {
@@ -146,37 +174,65 @@ public class StreamDeck {
     
     // Data Management
     
-    static let PAGE_PACKET_SIZE = 8191
     
     internal func dataPageOne(keyIndex: Int, data: Data) -> Data {
-        let bytes: [UInt8] = [
-            0x02, 0x01, 0x01, 0x00, 0x00, UInt8(keyIndex + 1),
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-            0x00, 0x00, 0x42, 0x4d, 0xf6, 0x3c, 0x00, 0x00,
-            0x00, 0x00, 0x00, 0x00, 0x36, 0x00, 0x00, 0x00,
-            0x28, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00,
-            0x48, 0x00, 0x00, 0x00, 0x01, 0x00, 0x18, 0x00,
-            0x00, 0x00, 0x00, 0x00, 0xc0, 0x3c, 0x00, 0x00,
-            0xc4, 0x0e, 0x00, 0x00, 0xc4, 0x0e, 0x00, 0x00,
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-        ]
         
-        var pageOneData = Data(bytes: bytes)
+        let bytes: [UInt8]
+        
+        switch product {
+        case .streamDeck:
+            bytes = [
+                0x02, 0x01, 0x01, 0x00, 0x00, UInt8(keyIndex + 1),
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x42, 0x4d, 0xf6, 0x3c, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x36, 0x00, 0x00, 0x00,
+                0x28, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00,
+                0x48, 0x00, 0x00, 0x00, 0x01, 0x00, 0x18, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0xc0, 0x3c, 0x00, 0x00,
+                0xc4, 0x0e, 0x00, 0x00, 0xc4, 0x0e, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+            ]
+            
+        case .streamDeckMini:
+            bytes = [
+                0x02, 0x01, 0x00, 0x00, 0x00, UInt8(keyIndex + 1), 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x42, 0x4d, 0x36, 0x4b, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x36, 0x00, 0x00, 0x00, 0x28, 0x00,
+                0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x01, 0x00, 0x18, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x4b, 0x00, 0x00, 0x13, 0x0b,    0x00, 0x00, 0x13, 0x0b, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+            ]
+        }
+        
+        var pageOneData = Data(bytes)
         pageOneData.append(data)
-        pageOneData.pad(toLength: StreamDeck.PAGE_PACKET_SIZE)
+        pageOneData.pad(toLength: product.pagePacketSize)
         
         return pageOneData
     }
     
-    internal func dataPageTwo(keyIndex: Int, data: Data) -> Data {
-        let bytes: [UInt8] = [
-            0x02, 0x01, 0x02, 0x00, 0x01, UInt8(keyIndex + 1),
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-        ]
+    internal func dataPageTwo(keyIndex: Int, bufIndex: Int, data: Data) -> Data {
         
-        var pageTwoData = Data(bytes: bytes)
+        let bytes: [UInt8]
+        
+        switch product {
+        case .streamDeck:
+            bytes = [
+                0x02, 0x01, 0x02, 0x00, 0x01, UInt8(keyIndex + 1),
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+            ]
+            
+        case .streamDeckMini:
+            bytes = [
+                0x02, 0x01, UInt8(bufIndex), 0x00, bufIndex == 0x13 ? 1 : 0, UInt8(keyIndex + 1), 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+            ]
+        }
+        
+        
+        var pageTwoData = Data(bytes)
         pageTwoData.append(data)
-        pageTwoData.pad(toLength: StreamDeck.PAGE_PACKET_SIZE)
+        pageTwoData.pad(toLength: product.pagePacketSize)
         
         return pageTwoData
     }

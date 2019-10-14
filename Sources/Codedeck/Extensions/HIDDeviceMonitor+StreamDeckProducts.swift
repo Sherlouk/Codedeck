@@ -14,7 +14,7 @@ import HIDSwift
 
 public extension HIDDeviceMonitor {
     
-    public convenience init(streamDeckProducts: [StreamDeckProduct] = StreamDeckProduct.allCases) {
+    convenience init(streamDeckProducts: [StreamDeckProduct] = StreamDeckProduct.allCases) {
         self.init(searchableProducts: streamDeckProducts.map({ $0.productInformation() }))
     }
     
