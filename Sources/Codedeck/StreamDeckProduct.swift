@@ -16,6 +16,7 @@ public enum StreamDeckProduct: CaseIterable {
     
     case streamDeck
     case streamDeckMini
+    case streamDeckXL
     
     // Public
     
@@ -31,6 +32,7 @@ public enum StreamDeckProduct: CaseIterable {
         switch self {
         case .streamDeck: return 15 // 5 x 3
         case .streamDeckMini: return 6 // 3 x 2
+        case .streamDeckXL: return 32 // 8 x 4
         }
     }
     
@@ -40,6 +42,7 @@ public enum StreamDeckProduct: CaseIterable {
         switch self {
         case .streamDeck: return 0x0fd9
         case .streamDeckMini: return 0x0fd9
+        case .streamDeckXL: return 0x0fd9
         }
     }
     
@@ -47,6 +50,7 @@ public enum StreamDeckProduct: CaseIterable {
         switch self {
         case .streamDeck: return 0x0060
         case .streamDeckMini: return 0x0063
+        case .streamDeckXL: return 0x006c
         }
     }
     

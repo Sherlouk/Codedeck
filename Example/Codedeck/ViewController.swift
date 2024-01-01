@@ -13,7 +13,7 @@ import HIDSwift
 class ViewController: NSViewController {
 
     var monitor: HIDDeviceMonitor = {
-        return HIDDeviceMonitor(streamDeckProducts: [.streamDeck])
+        return HIDDeviceMonitor(streamDeckProducts: StreamDeckProduct.allCases)
     }()
     
     override func viewDidLoad() {
