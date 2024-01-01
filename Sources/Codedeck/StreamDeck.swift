@@ -49,9 +49,15 @@ public class StreamDeck {
             throw Error.brightnessOutOfRange
         }
         
-        let bytes: [UInt8] = [0x05, 0x55, 0xaa, 0xd1, 0x01, UInt8(brightness)]
+        let bytes: [UInt8]
+        if product.isVersionTwo {
+            bytes = [0x03, 0x08, UInt8(brightness)]
+        } else {
+            bytes = [0x05, 0x55, 0xaa, 0xd1, 0x01, UInt8(brightness)]
+        }
+        
         var data = Data(bytes)
-        data.pad(toLength: device.reportSize)
+        data.pad(toLength: product.dataCount) // 17 (v1) or 32 (v2)
         
         device.sendFeatureReport(data: data)
         Logger.success("Set Brightness to \(brightness)%")
@@ -59,7 +65,13 @@ public class StreamDeck {
     
     /// Shows the default Elgato logo spread across the keys
     public func reset() {
-        let bytes: [UInt8] = [0x0B, 0x63]
+        let bytes: [UInt8]
+        if product.isVersionTwo {
+            bytes = [0x03, 0x02] // v2
+        } else {
+            bytes = [0x0B, 0x63] // v1
+        }
+        
         var data = Data(bytes)
         data.pad(toLength: device.reportSize)
         

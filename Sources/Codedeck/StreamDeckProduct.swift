@@ -72,8 +72,16 @@ public enum StreamDeckProduct: CaseIterable {
         switch self {
         case .streamDeck: return 17
         case .streamDeckMini: return 17
-        case .streamDeckXL: return 512
+        case .streamDeckXL: return 32
         }
+    }
+    
+    internal var isVersionTwo: Bool {
+        if case .streamDeckXL = self {
+            return true
+        }
+        
+        return false
     }
     
 }
