@@ -50,11 +50,36 @@ public class StreamDeckKey {
         let bytes: [UInt8] = [blue, green, red].map({ UInt8($0) })
         let data = Data(bytes)
         
-        let firstPage = streamDeck.dataPageOne(keyIndex: keyIndex, data: data.repeated(count: StreamDeckKey.NUM_FIRST_PAGE_PIXELS))
-        let secondPage = streamDeck.dataPageTwo(keyIndex: keyIndex, data: data.repeated(count: StreamDeckKey.NUM_SECOND_PAGE_PIXELS))
+        switch streamDeck.product {
+        case .streamDeck:
+            let firstPage = streamDeck.dataPageOne(keyIndex: keyIndex, data: data.repeated(count: StreamDeckKey.NUM_FIRST_PAGE_PIXELS))
+            let secondPage = streamDeck.dataPageTwo(keyIndex: keyIndex, bufIndex: 0, data: data.repeated(count: StreamDeckKey.NUM_SECOND_PAGE_PIXELS))
+            
+            streamDeck.write(data: firstPage)
+            streamDeck.write(data: secondPage)
+            
+        case .streamDeckMini:
+            let pageOnePacketSize = streamDeck.product.pagePacketSize - 70
+            let pageTwoPacketSize = streamDeck.product.pagePacketSize - 16
+            let iconBytes = 80 * 80 * 3
+            
+            let firstPage = streamDeck.dataPageOne(keyIndex: keyIndex, data: data.repeated(count: pageOnePacketSize / 3))
+            streamDeck.write(data: firstPage)
+            
+            var count = 0
+            var i = pageOnePacketSize
+            while i < iconBytes {
+                count += 1
+                let data = data.repeated(count: min(pageTwoPacketSize, iconBytes-i) / 3)
+                let secondPage = streamDeck.dataPageTwo(keyIndex: keyIndex, bufIndex: count, data: data)
+                streamDeck.write(data: secondPage)
+                i += pageTwoPacketSize
+            }
+            
+        case .streamDeckXL:
+            break
+        }
         
-        streamDeck.write(data: firstPage)
-        streamDeck.write(data: secondPage)
     }
     
     // Private
