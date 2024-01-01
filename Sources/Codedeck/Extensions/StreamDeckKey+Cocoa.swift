@@ -13,7 +13,7 @@ import Cocoa
 
 public extension StreamDeckKey {
     
-    public func setColor(color: NSColor) throws {
+    func setColor(color: NSColor) throws {
         try setColor(
             red: Int(color.redComponent * 255),
             green: Int(color.greenComponent * 255),

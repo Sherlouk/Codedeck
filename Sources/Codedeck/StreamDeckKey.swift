@@ -48,7 +48,7 @@ public class StreamDeckKey {
         try assertRGBValue(blue)
         
         let bytes: [UInt8] = [blue, green, red].map({ UInt8($0) })
-        let data = Data(bytes: bytes)
+        let data = Data(bytes)
         
         let firstPage = streamDeck.dataPageOne(keyIndex: keyIndex, data: data.repeated(count: StreamDeckKey.NUM_FIRST_PAGE_PIXELS))
         let secondPage = streamDeck.dataPageTwo(keyIndex: keyIndex, data: data.repeated(count: StreamDeckKey.NUM_SECOND_PAGE_PIXELS))

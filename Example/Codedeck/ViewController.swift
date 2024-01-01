@@ -8,6 +8,7 @@
 
 import Cocoa
 import Codedeck
+import HIDSwift
 
 class ViewController: NSViewController {
 
