@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cocoa
 
 public class StreamDeckKey {
     
@@ -59,9 +60,9 @@ public class StreamDeckKey {
             streamDeck.write(data: secondPage)
             
         case .streamDeckMini:
-            let pageOnePacketSize = streamDeck.product.pagePacketSize - 70
-            let pageTwoPacketSize = streamDeck.product.pagePacketSize - 16
-            let iconBytes = 80 * 80 * 3
+            let pageOnePacketSize = streamDeck.product.pagePacketSize - 70 // header size
+            let pageTwoPacketSize = streamDeck.product.pagePacketSize - 16 // header size
+            let iconBytes = streamDeck.product.iconSize * streamDeck.product.iconSize * 3
             
             let firstPage = streamDeck.dataPageOne(keyIndex: keyIndex, data: data.repeated(count: pageOnePacketSize / 3))
             streamDeck.write(data: firstPage)
@@ -77,7 +78,21 @@ public class StreamDeckKey {
             }
             
         case .streamDeckXL:
-            break
+            let packetSize = streamDeck.product.pagePacketSize - 8 // header size
+            let data = Data([red, green, blue, 1].map({ UInt8($0) }))
+            let fullImage = data.repeated(count: streamDeck.product.iconSize * streamDeck.product.iconSize)
+            let cgIm = BytesToTexture().texture(bytes: Array(fullImage), bytesPerRow: 96 * 4)
+            let bitmap = NSBitmapImageRep(cgImage: cgIm)
+            guard let data2 = bitmap.representation(using: .jpeg, properties: [.compressionFactor: 0.8]) else {
+                return
+            }
+            
+            let pages = Array(data2).chunked(into: packetSize)
+            
+            for (index, page) in pages.enumerated() {
+                let pageDetails = streamDeck.dataPageTwo(keyIndex: keyIndex, bufIndex: index, data: Data(page), isLast: index == pages.count - 1)
+                streamDeck.write(data: pageDetails)
+            }
         }
         
     }
@@ -90,4 +105,33 @@ public class StreamDeckKey {
         }
     }
     
+}
+
+class BytesToTexture {
+    func texture(bytes: [UInt8], bytesPerRow: Int) -> CGImage {
+        let rgbaData = CFDataCreate(nil, bytes, bytes.count)!
+        let provider = CGDataProvider(data: rgbaData)!
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.noneSkipLast.rawValue)
+        return CGImage(
+            width: bytesPerRow / 4,
+            height: bytes.count / bytesPerRow,
+            bitsPerComponent: 8,
+            bitsPerPixel: 32,
+            bytesPerRow: bytesPerRow,
+            space: colorSpace,
+            bitmapInfo: bitmapInfo,
+            provider: provider,
+            decode: nil,
+            shouldInterpolate: true,
+            intent: .defaultIntent
+        )!
+    }
+}
+extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[$0 ..< Swift.min($0 + size, count)])
+        }
+    }
 }

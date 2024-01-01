@@ -89,7 +89,14 @@ public class StreamDeck {
     
     /// Returns the key at the given index throwing an error if out of bounds
     public func key(for index: Int) throws -> StreamDeckKey {
-        guard let mappedIndex = StreamDeckKeyMapper().userToDeviceMapping[index] else {
+        let mapper = StreamDeckKeyMapper(product: product).userToDeviceMapping
+        
+        if mapper.isEmpty {
+            try assertKeyInRange(index - 1)
+            return StreamDeckKey(streamDeck: self, keyIndex: index - 1)
+        }
+        
+        guard let mappedIndex = mapper[index] else {
             throw Error.keyIndexOutOfRange
         }
         
@@ -123,11 +130,6 @@ public class StreamDeck {
     // Reading
     
     internal func receiveDataFromDevice(data: Data) {
-        guard data.count == product.dataCount else {
-            Logger.error("Data received from device was not correct size (\(data.count) != \(product.dataCount))")
-            return
-        }
-        
         // The first byte is the report ID
         // The last byte appears to be padding
         // We'll ignore these for now, the count should be equal to the key count.
@@ -207,7 +209,7 @@ public class StreamDeck {
         return pageOneData
     }
     
-    internal func dataPageTwo(keyIndex: Int, bufIndex: Int, data: Data) -> Data {
+    internal func dataPageTwo(keyIndex: Int, bufIndex: Int, data: Data, isLast: Bool = false) -> Data {
         let bytes: [UInt8]
         
         switch product {
@@ -224,7 +226,13 @@ public class StreamDeck {
             ]
             
         case .streamDeckXL:
-            bytes = []
+            let dataSize = UInt16(data.count).toBytes
+            let bufIndexArr = UInt16(bufIndex).toBytes
+            
+            bytes = [
+                0x02, 0x07, UInt8(keyIndex), isLast ? 1 : 0,
+                dataSize[0], dataSize[1], bufIndexArr[0], bufIndexArr[1],
+            ]
         }
         
         var pageTwoData = Data(bytes)
@@ -234,4 +242,32 @@ public class StreamDeck {
         return pageTwoData
     }
     
+}
+
+protocol UIntToBytesConvertable {
+    var toBytes: [UInt8] { get }
+}
+
+extension UIntToBytesConvertable {
+    func toByteArr<T: BinaryInteger>(endian: T, count: Int) -> [UInt8] {
+        var _endian = endian
+        let bytePtr = withUnsafePointer(to: &_endian) {
+            $0.withMemoryRebound(to: UInt8.self, capacity: count) {
+                UnsafeBufferPointer(start: $0, count: count)
+            }
+        }
+        return [UInt8](bytePtr)
+    }
+}
+
+extension UInt16: UIntToBytesConvertable {
+    var toBytes: [UInt8] {
+        if CFByteOrderGetCurrent() == Int(CFByteOrderLittleEndian.rawValue) {
+            return toByteArr(endian: self.littleEndian,
+                         count: MemoryLayout<UInt16>.size)
+        } else {
+            return toByteArr(endian: self.bigEndian,
+                             count: MemoryLayout<UInt16>.size)
+        }
+    }
 }
