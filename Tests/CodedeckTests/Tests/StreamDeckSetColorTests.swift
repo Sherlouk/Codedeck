@@ -12,7 +12,7 @@ import XCTest
 
 class StreamDeckSetColorTests: XCTestCase {
     
-    func testSetColorRed() {
+    func testSetColorRed() throws {
         let writeExpectation = expectation(description: "Two pages of content should be written to")
         writeExpectation.expectedFulfillmentCount = 2
         
@@ -34,13 +34,13 @@ class StreamDeckSetColorTests: XCTestCase {
         }
         
         let device = HIDDevice.makeMockStreamDeck(rawDevice: testDevice)
-        let streamDeck = try! StreamDeck(device: device)
+        let streamDeck = try StreamDeck(device: device)
         XCTAssertNoThrow(try streamDeck.key(for: 4).setColor(red: 255, green: 0, blue: 0))
         
         waitForExpectations(timeout: 0.1, handler: nil)
     }
     
-    func testClearKey() {
+    func testClearKey() throws {
         let writeExpectation = expectation(description: "Two pages of content should be written to")
         writeExpectation.expectedFulfillmentCount = 2
         
@@ -62,17 +62,17 @@ class StreamDeckSetColorTests: XCTestCase {
         }
         
         let device = HIDDevice.makeMockStreamDeck(rawDevice: testDevice)
-        let streamDeck = try! StreamDeck(device: device)
+        let streamDeck = try StreamDeck(device: device)
         XCTAssertNoThrow(try streamDeck.key(for: 4).clear())
         
         waitForExpectations(timeout: 0.1, handler: nil)
     }
     
-    func testSetColorOutOfBounds() {
+    func testSetColorOutOfBounds() throws {
         let device = HIDDevice.makeMockStreamDeck(rawDevice: TestDevice())
-        let streamDeck = try! StreamDeck(device: device)
+        let streamDeck = try StreamDeck(device: device)
         
-        let key = try! streamDeck.key(for: 1)
+        let key = try streamDeck.key(for: 1)
         let errorOne = StreamDeckKey.Error.rgbValueOutOfRange(value: 300)
         let errorTwo = StreamDeckKey.Error.rgbValueOutOfRange(value: -1)
         
@@ -84,10 +84,5 @@ class StreamDeckSetColorTests: XCTestCase {
         XCTAssertThrowsErrorMatching(try key.setColor(red: 0, green: -1, blue: 0), error: errorTwo)
         XCTAssertThrowsErrorMatching(try key.setColor(red: 0, green: 0, blue: -1), error: errorTwo)
     }
-    
-    static var allTests = [
-        ("testSetColorRed", testSetColorRed),
-        ("testSetColorOutOfBounds", testSetColorOutOfBounds),
-    ]
     
 }

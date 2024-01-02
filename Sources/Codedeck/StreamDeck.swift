@@ -130,6 +130,11 @@ public class StreamDeck {
     // Reading
     
     internal func receiveDataFromDevice(data: Data) {
+        guard data.count >= product.dataCount else {
+            Logger.error("Data received from device was not correct size (\(data.count) < \(product.dataCount))")
+            return
+        }
+        
         // The first byte is the report ID
         // The last byte appears to be padding
         // We'll ignore these for now, the count should be equal to the key count.
