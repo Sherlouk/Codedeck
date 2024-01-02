@@ -29,6 +29,10 @@ public class StreamDeck {
     let device: HIDDevice
     let product: StreamDeckProduct
     var keysPressed = [Int: Bool]()
+    var initialDataReceived = false
+
+    public var onKeyDown: ((Int) -> Void)?
+    public var onKeyUp: ((Int) -> Void)?
     
     public init(device: HIDDevice) throws {
         self.device = device
@@ -148,8 +152,38 @@ public class StreamDeck {
             keyData = data[4 ... 4 + product.keyCount]
         }
         
+        let sendKeyCommands = initialDataReceived
+        
         for (keyIndex, keyValue) in keyData.enumerated() {
-            keysPressed[keyIndex] = keyValue == 1
+            let isPressed = keyValue == 1
+            let oldValue = keysPressed[keyIndex]
+            
+            keysPressed[keyIndex] = isPressed
+            
+            // If this is the first load, then skip sending updates.
+            if !sendKeyCommands {
+                continue
+            }
+            
+            if isPressed != oldValue {
+                let mapping = StreamDeckKeyMapper(product: product).deviceToUserMapping
+                
+                guard let userKeyIndex = mapping.isEmpty ? keyIndex + 1 : mapping[keyIndex] else {
+                    Logger.warning("No mapping provided for key \(keyIndex) - can't send update.")
+                    continue
+                }
+                
+                if isPressed {
+                    onKeyDown?(userKeyIndex)
+                } else {
+                    onKeyUp?(userKeyIndex)
+                }
+            }
+        }
+        
+        if !initialDataReceived {
+            initialDataReceived = true
+            return
         }
         
         // End of functional logic, just printing out the pressed key to console
