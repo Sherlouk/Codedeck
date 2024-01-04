@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol HIDDeviceMonitorDelegate: class {
+public protocol HIDDeviceMonitorDelegate: AnyObject {
     func HIDDeviceAdded(device: HIDDevice)
     func HIDDeviceRemoved(device: HIDDevice)
     func HIDDeviceError(error: Error)

@@ -11,9 +11,9 @@ import XCTest
 
 class StreamDeckKeyPressedTests: XCTestCase {
     
-    func testAllKeysPressed() {
+    func testAllKeysPressed() throws {
         let device = HIDDevice.makeMockStreamDeck(rawDevice: TestDevice())
-        let streamDeck = try! StreamDeck(device: device)
+        let streamDeck = try StreamDeck(device: device)
         
         // 1. Validate everything is depressed
         streamDeck.allKeys().forEach({
@@ -21,7 +21,7 @@ class StreamDeckKeyPressedTests: XCTestCase {
         })
         
         // 2. Set everything to pressed
-        let dataOne = Data(bytes: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0])
+        let dataOne = Data([0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0])
         streamDeck.receiveDataFromDevice(data: dataOne)
         
         // 3. Validate everything is pressed
@@ -30,7 +30,7 @@ class StreamDeckKeyPressedTests: XCTestCase {
         })
         
         // 4. Set everything to depressed
-        let dataTwo = Data(bytes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+        let dataTwo = Data([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
         streamDeck.receiveDataFromDevice(data: dataTwo)
         
         // 5. Validate everything is depressed
@@ -39,9 +39,9 @@ class StreamDeckKeyPressedTests: XCTestCase {
         })
     }
     
-    func testInvalidKeyPressData() {
+    func testInvalidKeyPressData() throws {
         let device = HIDDevice.makeMockStreamDeck(rawDevice: TestDevice())
-        let streamDeck = try! StreamDeck(device: device)
+        let streamDeck = try StreamDeck(device: device)
         
         // 1. Validate everything is depressed
         streamDeck.allKeys().forEach({
@@ -49,7 +49,7 @@ class StreamDeckKeyPressedTests: XCTestCase {
         })
         
         // 2. Set everything to pressed
-        let dataOne = Data(bytes: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0])
+        let dataOne = Data([0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0])
         streamDeck.receiveDataFromDevice(data: dataOne)
         
         // 3. Validate everything is pressed
@@ -58,7 +58,7 @@ class StreamDeckKeyPressedTests: XCTestCase {
         })
         
         // 4. Send invalid data size to method
-        let dataTwo = Data(bytes: [0, 0, 0, 0, 0])
+        let dataTwo = Data([0, 0, 0, 0, 0])
         streamDeck.receiveDataFromDevice(data: dataTwo)
         
         // 5. Validate everything is still pressed
@@ -67,9 +67,9 @@ class StreamDeckKeyPressedTests: XCTestCase {
         })
     }
     
-    func testCorrectKeyMapping() {
+    func testCorrectKeyMapping() throws {
         let device = HIDDevice.makeMockStreamDeck(rawDevice: TestDevice())
-        let streamDeck = try! StreamDeck(device: device)
+        let streamDeck = try StreamDeck(device: device)
         
         func validateSingleKeyDown(keyIndex: Int) {
             streamDeck.allKeys().forEach({
@@ -85,30 +85,24 @@ class StreamDeckKeyPressedTests: XCTestCase {
         validateSingleKeyDown(keyIndex: -1)
         
         // 2. Set key 0 to pressed, everything else to depressed
-        let dataOne = Data(bytes: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+        let dataOne = Data([0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
         streamDeck.receiveDataFromDevice(data: dataOne)
         validateSingleKeyDown(keyIndex: 0)
         
         // 3. Set key 5 to pressed, everything else to depressed
-        let dataTwo = Data(bytes: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+        let dataTwo = Data([0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
         streamDeck.receiveDataFromDevice(data: dataTwo)
         validateSingleKeyDown(keyIndex: 5)
         
         // 4. Set key 10 to pressed, everything else to depressed
-        let dataThree = Data(bytes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0])
+        let dataThree = Data([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0])
         streamDeck.receiveDataFromDevice(data: dataThree)
         validateSingleKeyDown(keyIndex: 10)
         
         // 5. Set key 15 to pressed, everything else to depressed
-        let dataFour = Data(bytes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0])
+        let dataFour = Data([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0])
         streamDeck.receiveDataFromDevice(data: dataFour)
         validateSingleKeyDown(keyIndex: 14)
     }
     
-    static var allTests = [
-        ("testAllKeysPressed", testAllKeysPressed),
-        ("testInvalidKeyPressData", testInvalidKeyPressData),
-        ("testCorrectKeyMapping", testCorrectKeyMapping)
-    ]
-
 }

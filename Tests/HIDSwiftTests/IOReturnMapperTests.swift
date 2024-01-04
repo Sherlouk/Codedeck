@@ -70,9 +70,4 @@ class IOReturnMapperTests: XCTestCase {
         XCTAssertEqual(kIOReturnNotFound, IOReturnMapper.kIOReturnNotFound.rawValue)
         XCTAssertEqual(kIOReturnInvalid, IOReturnMapper.kIOReturnInvalid.rawValue)
     }
-    
-    static var allTests = [
-        ("testCreation", testCreation),
-        ("testMapping", testMapping)
-    ]
 }

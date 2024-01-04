@@ -17,6 +17,9 @@ public enum StreamDeckProduct: CaseIterable {
     case streamDeck
     case streamDeckMini
     
+    // XL is a Gen2 device
+    case streamDeckXL
+    
     // Public
     
     public func productInformation() -> HIDDeviceMonitor.ProductInformation {
@@ -24,13 +27,18 @@ public enum StreamDeckProduct: CaseIterable {
     }
     
     public var iconSize: Int {
-        return 72
+        switch self {
+        case .streamDeck: return 72
+        case .streamDeckMini: return 80
+        case .streamDeckXL: return 96
+        }
     }
     
     public var keyCount: Int {
         switch self {
         case .streamDeck: return 15 // 5 x 3
         case .streamDeckMini: return 6 // 3 x 2
+        case .streamDeckXL: return 32 // 8 x 4
         }
     }
     
@@ -40,6 +48,7 @@ public enum StreamDeckProduct: CaseIterable {
         switch self {
         case .streamDeck: return 0x0fd9
         case .streamDeckMini: return 0x0fd9
+        case .streamDeckXL: return 0x0fd9
         }
     }
     
@@ -47,7 +56,32 @@ public enum StreamDeckProduct: CaseIterable {
         switch self {
         case .streamDeck: return 0x0060
         case .streamDeckMini: return 0x0063
+        case .streamDeckXL: return 0x006c
         }
+    }
+    
+    internal var pagePacketSize: Int {
+        switch self {
+        case .streamDeck: return 8191
+        case .streamDeckMini: return 1024
+        case .streamDeckXL: return 1024
+        }
+    }
+    
+    internal var dataCount: Int {
+        switch self {
+        case .streamDeck: return 17
+        case .streamDeckMini: return 17
+        case .streamDeckXL: return 32
+        }
+    }
+    
+    internal var isVersionTwo: Bool {
+        if case .streamDeckXL = self {
+            return true
+        }
+        
+        return false
     }
     
 }

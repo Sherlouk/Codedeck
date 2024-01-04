@@ -8,11 +8,12 @@
 
 import Cocoa
 import Codedeck
+import HIDSwift
 
 class ViewController: NSViewController {
 
     var monitor: HIDDeviceMonitor = {
-        return HIDDeviceMonitor(streamDeckProducts: [.streamDeck])
+        return HIDDeviceMonitor(streamDeckProducts: StreamDeckProduct.allCases)
     }()
     
     override func viewDidLoad() {
@@ -38,7 +39,7 @@ extension ViewController: HIDDeviceMonitorDelegate {
             
             let streamDeck = try StreamDeck(device: device)
             try streamDeck.clearAllKeys()
-
+            
             try streamDeck.allKeys().forEach({
                 try $0.setColor(
                     red: Int.random(in: 0...255),
@@ -48,9 +49,18 @@ extension ViewController: HIDDeviceMonitorDelegate {
             })
             
             try streamDeck.key(for: 1).setColor(color: .red)
-
+            
+            if #available(macOS 11.0, *) {
+                try streamDeck.key(for: 2).setImage { context, size in
+                    guard let image = NSImage(named: "icon")?.cgImage(forProposedRect: nil, context: nil, hints: nil) else {
+                        return
+                    }
+                    
+                    context.draw(image, in: .init(origin: .zero, size: size), byTiling: false)
+                }
+            }
+            
             try streamDeck.setBrightness(50)
-//            streamDeck.reset()
         } catch {
             print(error)
         }

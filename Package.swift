@@ -1,4 +1,4 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.4
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -12,7 +12,11 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(name: "Codedeck", dependencies: ["HIDSwift"]),
-        .testTarget(name: "CodedeckTests", dependencies: ["Codedeck"]),
+        .testTarget(
+            name: "CodedeckTests",
+            dependencies: ["Codedeck"],
+            resources: [.copy("Resources")]
+        ),
         
         .target(name: "HIDSwift", dependencies: []),
         .testTarget(name: "HIDSwiftTests", dependencies: ["HIDSwift"]),

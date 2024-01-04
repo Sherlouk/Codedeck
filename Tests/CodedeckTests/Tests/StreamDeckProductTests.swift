@@ -24,7 +24,7 @@ class StreamDeckProductTests: XCTestCase {
     
     func testIconSize() {
         XCTAssertEqual(StreamDeckProduct.streamDeck.iconSize, 72)
-        XCTAssertEqual(StreamDeckProduct.streamDeckMini.iconSize, 72)
+        XCTAssertEqual(StreamDeckProduct.streamDeckMini.iconSize, 80)
     }
     
     func testKeyCount() {
@@ -55,17 +55,6 @@ class StreamDeckProductTests: XCTestCase {
     
     func testCaseIterable() {
         // This test is primarily a way to force an error should we ever add other products
-        XCTAssertEqual(StreamDeckProduct.allCases, [.streamDeck, .streamDeckMini])
+        XCTAssertEqual(StreamDeckProduct.allCases, [.streamDeck, .streamDeckMini, .streamDeckXL])
     }
-    
-    static var allTests = [
-        ("testProductId", testProductId),
-        ("testVendorId", testVendorId),
-        ("testIconSize", testIconSize),
-        ("testKeyCount", testKeyCount),
-        ("testProductInformation", testProductInformation),
-        ("testCaseIterable", testCaseIterable),
-        ("testInvalidProduct", testInvalidProduct),
-    ]
-
 }
