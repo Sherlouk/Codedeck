@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Cocoa
+import CoreGraphics
+import CoreImage
 
 extension Data {
     func processJPEG(width: Int) -> [UInt8]? {
@@ -41,9 +42,13 @@ extension Data {
             return nil
         }
         
-        let bitmap = NSBitmapImageRep(cgImage: cgImage)
+        let context = CIContext()
+        let image = CIImage(cgImage: cgImage)
+        let options = [
+            kCGImageDestinationLossyCompressionQuality as CIImageRepresentationOption: 0.75
+        ]
         
-        guard let data = bitmap.representation(using: .jpeg, properties: [.compressionFactor: 0.75]) else {
+        guard let data = context.jpegRepresentation(of: image, colorSpace: colorSpace, options: options) else {
             return nil
         }
         
